@@ -1,4 +1,4 @@
 # linguistic-capital
 linguistic capital,1.35B language capital
 
-语言资本
+13.5亿句 语言资本

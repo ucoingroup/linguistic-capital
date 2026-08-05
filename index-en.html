@@ -1,0 +1,7647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth's Best 135 Million Language Capital Quotes</title>
+<style>
+/* ============================================================ THEME SYSTEM */
+:root {
+  --bg: #0a0e27;
+  --bg2: #1a1f3a;
+  --card-bg: rgba(20,25,60,0.6);
+  --card-border: rgba(100,150,255,0.15);
+  --text: #e8ecf4;
+  --text-dim: #8892b0;
+  --accent: #64ffda;
+  --accent2: #bd93f9;
+  --accent3: #ff79c6;
+  --link: #64ffda;
+  --star-opacity: 1;
+  --shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+[data-theme="earth"] {
+  --bg: #f0f9f0;
+  --bg2: #e0eee0;
+  --card-bg: rgba(255,255,255,0.8);
+  --card-border: rgba(60,160,60,0.15);
+  --text: #1a3a1a;
+  --text-dim: #4a6a4a;
+  --accent: #2e7d32;
+  --accent2: #43a047;
+  --accent3: #66bb6a;
+  --link: #2e7d32;
+  --star-opacity: 0;
+  --shadow: 0 4px 20px rgba(0,80,0,0.08);
+}
+[data-theme="business"] {
+  --bg: #f5f7fa;
+  --bg2: #eef1f5;
+  --card-bg: rgba(255,255,255,0.95);
+  --card-border: rgba(30,80,160,0.12);
+  --text: #1a2238;
+  --text-dim: #5a6a80;
+  --accent: #1565c0;
+  --accent2: #1976d2;
+  --accent3: #42a5f5;
+  --link: #1565c0;
+  --star-opacity: 0;
+  --shadow: 0 2px 12px rgba(0,20,60,0.06);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+  overflow-x: hidden;
+}
+/* Starfield canvas */
+#starfield {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  z-index: 0; opacity: var(--star-opacity);
+  pointer-events: none;
+}
+/* Header */
+header {
+  position: relative; z-index: 1;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+header .subtitle {
+  color: var(--text-dim); font-size: 0.85rem; max-width: 800px;
+  margin: 0 auto 20px; line-height: 1.8;
+}
+header .stats {
+  display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+header .stat {
+  text-align: center;
+}
+header .stat .num {
+  font-size: 1.8rem; font-weight: 700; color: var(--accent);
+}
+header .stat .label {
+  font-size: 0.8rem; color: var(--text-dim);
+}
+/* Controls */
+.controls {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto 20px; padding: 0 20px;
+}
+.controls-row {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  margin-bottom: 12px;
+}
+.search-box {
+  flex: 1; min-width: 200px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text); font-size: 0.95rem;
+  outline: none; transition: border-color 0.3s;
+}
+.search-box:focus { border-color: var(--accent); }
+.btn {
+  padding: 8px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text); cursor: pointer;
+  font-size: 0.85rem; transition: all 0.3s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+/* Theme switcher */
+.theme-switch {
+  display: flex; gap: 4px; padding: 4px;
+  background: var(--card-bg); border-radius: 8px;
+  border: 1px solid var(--card-border);
+}
+.theme-btn {
+  padding: 6px 12px; border: none; background: none;
+  color: var(--text-dim); cursor: pointer; border-radius: 6px;
+  font-size: 0.8rem; transition: all 0.3s;
+}
+.theme-btn.active { background: var(--accent); color: var(--bg); }
+/* Dimension chips */
+.dim-chips {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  max-width: 1200px; margin: 0 auto 20px; padding: 0 20px;
+  position: relative; z-index: 1;
+}
+.dim-chip {
+  padding: 5px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  color: var(--text-dim); cursor: pointer;
+  font-size: 0.8rem; transition: all 0.3s;
+}
+.dim-chip:hover { border-color: var(--accent); color: var(--accent); }
+.dim-chip.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+/* Quote grid */
+.quotes-grid {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 20px 40px;
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 16px;
+}
+.quote-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, border-color 0.3s;
+  position: relative;
+}
+.quote-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.quote-card .q-zh {
+  font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;
+  line-height: 1.7;
+}
+.quote-card .q-en {
+  font-size: 0.9rem; color: var(--text-dim); margin-bottom: 12px;
+  line-height: 1.6; font-style: italic;
+}
+.quote-card .q-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.75rem;
+}
+.quote-card .q-cat {
+  color: var(--accent); font-weight: 600;
+}
+.quote-card .q-source {
+  color: var(--text-dim);
+}
+.quote-card .q-copy {
+  position: absolute; top: 10px; right: 10px;
+  padding: 4px 10px; border: 1px solid var(--card-border);
+  border-radius: 6px; background: none; color: var(--text-dim);
+  cursor: pointer; font-size: 0.7rem; opacity: 0;
+  transition: opacity 0.3s;
+}
+.quote-card:hover .q-copy { opacity: 1; }
+.quote-card .q-copy:hover { border-color: var(--accent); color: var(--accent); }
+/* Loading */
+.loading {
+  text-align: center; padding: 40px;
+  color: var(--text-dim); font-size: 1rem;
+  position: relative; z-index: 1;
+}
+.loading .spinner {
+  display: inline-block; width: 30px; height: 30px;
+  border: 3px solid var(--card-border); border-top-color: var(--accent);
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+/* Pagination */
+.pagination {
+  max-width: 1200px; margin: 0 auto 40px;
+  padding: 20px; text-align: center;
+  position: relative; z-index: 1;
+}
+.pagination .info {
+  color: var(--text-dim); font-size: 0.85rem; margin-bottom: 10px;
+}
+.pagination .btn { margin: 0 5px; }
+/* Footer */
+footer {
+  position: relative; z-index: 1;
+  background: var(--bg2);
+  padding: 40px 20px 30px;
+  margin-top: 20px;
+  border-top: 1px solid var(--card-border);
+}
+footer .footer-content {
+  max-width: 1200px; margin: 0 auto;
+  text-align: center;
+}
+footer h3 {
+  font-size: 1.1rem; margin-bottom: 8px; color: var(--accent);
+}
+footer p {
+  color: var(--text-dim); font-size: 0.8rem;
+  max-width: 600px; margin: 0 auto 20px;
+}
+footer .links {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px; margin-bottom: 20px;
+}
+footer .footer-link {
+  padding: 6px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--link); text-decoration: none;
+  font-size: 0.8rem; transition: all 0.3s;
+}
+footer .footer-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+footer .copyright {
+  color: var(--text-dim); font-size: 0.75rem;
+}
+/* Random quote modal */
+.random-modal {
+  display: none; position: fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.7); z-index: 100;
+  justify-content: center; align-items: center;
+}
+.random-modal.show { display: flex; }
+.random-modal .modal-content {
+  max-width: 600px; width: 90%;
+  background: var(--bg2); border: 1px solid var(--accent);
+  border-radius: 16px; padding: 40px; text-align: center;
+  position: relative;
+}
+.random-modal .close-btn {
+  position: absolute; top: 15px; right: 15px;
+  background: none; border: none; color: var(--text-dim);
+  font-size: 1.5rem; cursor: pointer;
+}
+.random-modal .q-zh {
+  font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;
+  line-height: 1.8;
+}
+.random-modal .q-en {
+  font-size: 1rem; color: var(--text-dim); margin-bottom: 20px;
+  font-style: italic;
+}
+.random-modal .q-meta {
+  color: var(--accent); font-size: 0.85rem;
+}
+/* Mobile */
+@media (max-width: 600px) {
+  header { padding: 30px 15px 20px; }
+  header .stats { gap: 15px; }
+  header .stat .num { font-size: 1.3rem; }
+  .quotes-grid { grid-template-columns: 1fr; padding: 0 10px 30px; }
+  .controls { padding: 0 10px; }
+  .dim-chips { padding: 0 10px; }
+}
+</style>
+</head>
+<body data-theme="space">
+
+<canvas id="starfield"></canvas>
+
+<header>
+  <h1>Earth's Best 135 Million Language Capital Quotes</h1>
+  <p class="subtitle">21 Dimensions of Wisdom for Humanity</p>
+  <div class="stats">
+    <div class="stat"><div class="num" id="stat-total">136M+</div><div class="label">Language Capital Quotes</div></div>
+    <div class="stat"><div class="num">21</div><div class="label">dimensions</div></div>
+    <div class="stat"><div class="num" id="stat-gen">0</div><div class="label">Generated</div></div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-row">
+    <input type="text" class="search-box" id="search" placeholder="Search quotes...">
+    <button class="btn" id="random-btn">Random Quote</button>
+    <a href="index.html" class="btn">中文</a>
+    <div class="theme-switch">
+      <button class="theme-btn active" data-theme="space">Deep Space</button>
+      <button class="theme-btn" data-theme="earth">Earth Oasis</button>
+      <button class="theme-btn" data-theme="business">Classic Business</button>
+    </div>
+  </div>
+</div>
+
+<div class="dim-chips" id="dim-chips">
+  <button class="dim-chip active" data-dim="all">All Dimensions</button>
+      <button class="dim-chip" data-dim="华夏智慧">Chinese Wisdom</button>
+      <button class="dim-chip" data-dim="地球村共识">Global Consensus</button>
+      <button class="dim-chip" data-dim="星际文明">Interstellar Civilization</button>
+      <button class="dim-chip" data-dim="个人成长">Personal Growth</button>
+      <button class="dim-chip" data-dim="团队力量">Team Power</button>
+      <button class="dim-chip" data-dim="家庭和谐">Family Harmony</button>
+      <button class="dim-chip" data-dim="国家治理">National Governance</button>
+      <button class="dim-chip" data-dim="地球家园">Earth Home</button>
+      <button class="dim-chip" data-dim="思维认知">Cognitive Thinking</button>
+      <button class="dim-chip" data-dim="语言力量">Power of Language</button>
+      <button class="dim-chip" data-dim="墨家科技">Mohist Tech</button>
+      <button class="dim-chip" data-dim="经济金融">Economics & Finance</button>
+      <button class="dim-chip" data-dim="艺术美学">Art & Aesthetics</button>
+      <button class="dim-chip" data-dim="健康养生">Health & Wellness</button>
+      <button class="dim-chip" data-dim="未来科技">Future Tech</button>
+      <button class="dim-chip" data-dim="世界文明">World Civilization</button>
+      <button class="dim-chip" data-dim="商业智慧">Business Wisdom</button>
+      <button class="dim-chip" data-dim="教育学习">Education & Learning</button>
+      <button class="dim-chip" data-dim="生命哲学">Philosophy of Life</button>
+      <button class="dim-chip" data-dim="和平正义">Peace & Justice</button>
+      <button class="dim-chip" data-dim="冒险探索">Adventure & Exploration</button>
+
+</div>
+
+<div class="quotes-grid" id="quotes-grid"></div>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div>Generating quotes...</div>
+</div>
+
+<div class="pagination" id="pagination" style="display:none;">
+  <div class="info" id="page-info"></div>
+  <button class="btn" id="prev-page">Page -1</button>
+  <button class="btn" id="next-page">Load More</button>
+</div>
+
+<div class="random-modal" id="random-modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="document.getElementById('random-modal').classList.remove('show')">&times;</button>
+    <div class="q-zh" id="modal-zh"></div>
+    <div class="q-en" id="modal-en"></div>
+    <div class="q-meta" id="modal-meta"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <h3>Earth's Best Language Capital</h3>
+    <p>From Chinese wisdom to interstellar civilization, from personal growth to our Earth home — 21 dimensions, 136,000,000 bilingual quotes as language capital for human civilization.</p>
+    <div class="links">
+      <a href="https://ucoingroup.github.io/earths-best-coin/" target="_blank" class="footer-link">Earth's Best Coin</a>
+      <a href="https://ucoingroup.github.io/eaco50rate/" target="_blank" class="footer-link">EACO 50 Rate</a>
+      <a href="https://ucoingroup.github.io/100WaysToWealth/" target="_blank" class="footer-link">100 Ways To Wealth</a>
+      <a href="https://ucoingroup.github.io/earth-100-friends/" target="_blank" class="footer-link">Earth 100 Friends</a>
+      <a href="https://ucoingroup.github.io/eacoSWAP/" target="_blank" class="footer-link">EACO SWAP</a>
+      <a href="https://ucoingroup.github.io/good-books/" target="_blank" class="footer-link">Good Books</a>
+      <a href="https://ucoingroup.github.io/eur-eaco/" target="_blank" class="footer-link">EUR EACO</a>
+      <a href="https://ucoingroup.github.io/au-trade/" target="_blank" class="footer-link">AU Trade</a>
+      <a href="https://ucoingroup.github.io/Mohist-Tech/" target="_blank" class="footer-link">Mohist Tech</a>
+      <a href="https://eaco-build-world.base44.app/" target="_blank" class="footer-link">EACO Build World</a>
+
+    </div>
+    <div class="copyright">Earth's Best Coin (EACO) &copy; 2026</div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// Earth's Best Quotes - Bilingual Quote Generation Engine
+// Auto-generated from Python data source
+// 21 dimensions, 200 templates, concept modifier expansion
+// ============================================================
+
+const ENGINE_DATA = {
+  dimensions: {
+  "华夏智慧": {
+    "dim_zh": "华夏智慧",
+    "dim_en": "Chinese wisdom",
+    "concepts": [
+      [
+        "道",
+        "the Way"
+      ],
+      [
+        "德",
+        "virtue"
+      ],
+      [
+        "仁",
+        "benevolence"
+      ],
+      [
+        "义",
+        "righteousness"
+      ],
+      [
+        "礼",
+        "propriety"
+      ],
+      [
+        "智",
+        "wisdom"
+      ],
+      [
+        "信",
+        "trust"
+      ],
+      [
+        "和",
+        "harmony"
+      ],
+      [
+        "中",
+        "the middle way"
+      ],
+      [
+        "诚",
+        "sincerity"
+      ],
+      [
+        "敬",
+        "reverence"
+      ],
+      [
+        "恕",
+        "forbearance"
+      ],
+      [
+        "孝",
+        "filial piety"
+      ],
+      [
+        "悌",
+        "fraternal duty"
+      ],
+      [
+        "忠",
+        "loyalty"
+      ],
+      [
+        "勇",
+        "courage"
+      ],
+      [
+        "君子",
+        "the gentleman"
+      ],
+      [
+        "圣人",
+        "the sage"
+      ],
+      [
+        "小人",
+        "the petty person"
+      ],
+      [
+        "天下",
+        "the world"
+      ],
+      [
+        "修身",
+        "self-cultivation"
+      ],
+      [
+        "齐家",
+        "family management"
+      ],
+      [
+        "治国",
+        "governing the state"
+      ],
+      [
+        "平天下",
+        "bringing peace to the world"
+      ],
+      [
+        "无为",
+        "non-action"
+      ],
+      [
+        "自然",
+        "nature"
+      ],
+      [
+        "虚实",
+        "void and reality"
+      ],
+      [
+        "阴阳",
+        "yin and yang"
+      ],
+      [
+        "五行",
+        "the five elements"
+      ],
+      [
+        "八卦",
+        "the eight trigrams"
+      ],
+      [
+        "天道",
+        "the heavenly Way"
+      ],
+      [
+        "人道",
+        "the human Way"
+      ],
+      [
+        "良知",
+        "innate knowing"
+      ],
+      [
+        "格物",
+        "investigating things"
+      ],
+      [
+        "致知",
+        "extending knowledge"
+      ],
+      [
+        "诚意",
+        "making intentions sincere"
+      ],
+      [
+        "正心",
+        "rectifying the mind"
+      ],
+      [
+        "止于至善",
+        "resting in the highest good"
+      ],
+      [
+        "知止",
+        "knowing when to stop"
+      ],
+      [
+        "持中",
+        "holding the center"
+      ],
+      [
+        "守正",
+        "upholding righteousness"
+      ],
+      [
+        "谦卑",
+        "humility"
+      ],
+      [
+        "节制",
+        "moderation"
+      ],
+      [
+        "包容",
+        "inclusiveness"
+      ],
+      [
+        "坚韧",
+        "perseverance"
+      ],
+      [
+        "自省",
+        "self-reflection"
+      ],
+      [
+        "慎独",
+        "watchfulness in solitude"
+      ]
+    ],
+    "actions": [
+      [
+        "修身养性",
+        "cultivate one's moral character"
+      ],
+      [
+        "齐家治国",
+        "manage family and govern state"
+      ],
+      [
+        "克己复礼",
+        "restrain oneself and return to propriety"
+      ],
+      [
+        "见贤思齐",
+        "emulate the virtuous"
+      ],
+      [
+        "温故知新",
+        "review the old to learn the new"
+      ],
+      [
+        "学以致用",
+        "apply what one learns"
+      ],
+      [
+        "知行合一",
+        "unify knowledge and action"
+      ],
+      [
+        "返璞归真",
+        "return to original purity"
+      ],
+      [
+        "顺应天理",
+        "follow heavenly principles"
+      ],
+      [
+        "厚德载物",
+        "bear the world with deep virtue"
+      ],
+      [
+        "宁静致远",
+        "tranquility leads to far-reaching goals"
+      ],
+      [
+        "淡泊明志",
+        "a simple life reveals high aspirations"
+      ],
+      [
+        "虚怀若谷",
+        "be as open-minded as a valley"
+      ],
+      [
+        "海纳百川",
+        "the sea accepts a hundred rivers"
+      ],
+      [
+        "自强不息",
+        "ceaselessly strive"
+      ],
+      [
+        "崇德向善",
+        "honor virtue and pursue goodness"
+      ],
+      [
+        "以德服人",
+        "win people through virtue"
+      ],
+      [
+        "言而有信",
+        "be trustworthy in words"
+      ],
+      [
+        "身体力行",
+        "practice what one preaches"
+      ],
+      [
+        "反求诸己",
+        "seek causes within oneself"
+      ],
+      [
+        "居安思危",
+        "think of danger in times of peace"
+      ],
+      [
+        "防微杜渐",
+        "nip evil in the bud"
+      ],
+      [
+        "循序渐进",
+        "proceed step by step"
+      ],
+      [
+        "持之以恒",
+        "persevere to the end"
+      ],
+      [
+        "舍生取义",
+        "sacrifice life for righteousness"
+      ],
+      [
+        "杀身成仁",
+        "die to achieve benevolence"
+      ],
+      [
+        "见义勇为",
+        "stand up for righteousness"
+      ],
+      [
+        "从善如流",
+        "follow good advice like flowing water"
+      ],
+      [
+        "三省吾身",
+        "thrice daily examine oneself"
+      ],
+      [
+        "慎言笃行",
+        "be careful in speech and earnest in action"
+      ],
+      [
+        "守正不阿",
+        "uphold justice without flinching"
+      ],
+      [
+        "光明磊落",
+        "open and upright"
+      ],
+      [
+        "高风亮节",
+        "noble character"
+      ],
+      [
+        "虚心纳谏",
+        "humbly accept advice"
+      ],
+      [
+        "择善而从",
+        "choose the good and follow it"
+      ],
+      [
+        "改过迁善",
+        "correct errors and move toward good"
+      ],
+      [
+        "修己安人",
+        "cultivate oneself to bring peace to others"
+      ],
+      [
+        "明德惟馨",
+        "bright virtue is fragrant"
+      ]
+    ],
+    "sources": [
+      "《论语》",
+      "《道德经》",
+      "《周易》",
+      "《大学》",
+      "《中庸》",
+      "《孟子》",
+      "《庄子》",
+      "《荀子》",
+      "《韩非子》",
+      "《孙子兵法》",
+      "《礼记》",
+      "《尚书》",
+      "《诗经》",
+      "《左传》",
+      "《孝经》",
+      "儒家",
+      "道家",
+      "法家",
+      "墨家",
+      "禅宗",
+      "宋明理学",
+      "王阳明",
+      "朱熹",
+      "二程",
+      "陆九渊",
+      "顾炎武",
+      "王夫之",
+      "黄宗羲"
+    ]
+  },
+  "地球村共识": {
+    "dim_zh": "地球村共识",
+    "dim_en": "global consensus",
+    "concepts": [
+      [
+        "和平",
+        "peace"
+      ],
+      [
+        "自由",
+        "freedom"
+      ],
+      [
+        "平等",
+        "equality"
+      ],
+      [
+        "博爱",
+        "fraternity"
+      ],
+      [
+        "民主",
+        "democracy"
+      ],
+      [
+        "人权",
+        "human rights"
+      ],
+      [
+        "正义",
+        "justice"
+      ],
+      [
+        "公平",
+        "fairness"
+      ],
+      [
+        "尊严",
+        "dignity"
+      ],
+      [
+        "尊重",
+        "respect"
+      ],
+      [
+        "包容",
+        "inclusion"
+      ],
+      [
+        "多元",
+        "diversity"
+      ],
+      [
+        "对话",
+        "dialogue"
+      ],
+      [
+        "合作",
+        "cooperation"
+      ],
+      [
+        "理解",
+        "understanding"
+      ],
+      [
+        "宽容",
+        "tolerance"
+      ],
+      [
+        "团结",
+        "solidarity"
+      ],
+      [
+        "互助",
+        "mutual aid"
+      ],
+      [
+        "共享",
+        "sharing"
+      ],
+      [
+        "共赢",
+        "win-win"
+      ],
+      [
+        "发展",
+        "development"
+      ],
+      [
+        "进步",
+        "progress"
+      ],
+      [
+        "文明",
+        "civilization"
+      ],
+      [
+        "启蒙",
+        "enlightenment"
+      ],
+      [
+        "理性",
+        "reason"
+      ],
+      [
+        "科学",
+        "science"
+      ],
+      [
+        "教育",
+        "education"
+      ],
+      [
+        "健康",
+        "health"
+      ],
+      [
+        "福祉",
+        "wellbeing"
+      ],
+      [
+        "繁荣",
+        "prosperity"
+      ],
+      [
+        "可持续",
+        "sustainability"
+      ],
+      [
+        "未来",
+        "future"
+      ],
+      [
+        "命运",
+        "destiny"
+      ],
+      [
+        "共同体",
+        "community"
+      ],
+      [
+        "全球化",
+        "globalization"
+      ],
+      [
+        "互联互通",
+        "interconnectivity"
+      ],
+      [
+        "责任",
+        "responsibility"
+      ],
+      [
+        "义务",
+        "obligation"
+      ],
+      [
+        "权利",
+        "rights"
+      ],
+      [
+        "法治",
+        "rule of law"
+      ],
+      [
+        "透明",
+        "transparency"
+      ],
+      [
+        "问责",
+        "accountability"
+      ],
+      [
+        "参与",
+        "participation"
+      ],
+      [
+        "协商",
+        "consultation"
+      ]
+    ],
+    "actions": [
+      [
+        "维护和平",
+        "maintain peace"
+      ],
+      [
+        "促进发展",
+        "promote development"
+      ],
+      [
+        "保护人权",
+        "protect human rights"
+      ],
+      [
+        "消除贫困",
+        "eradicate poverty"
+      ],
+      [
+        "推动对话",
+        "promote dialogue"
+      ],
+      [
+        "加强合作",
+        "strengthen cooperation"
+      ],
+      [
+        "尊重差异",
+        "respect differences"
+      ],
+      [
+        "化解冲突",
+        "resolve conflicts"
+      ],
+      [
+        "构建信任",
+        "build trust"
+      ],
+      [
+        "共享未来",
+        "share the future"
+      ],
+      [
+        "跨越文化",
+        "bridge cultures"
+      ],
+      [
+        "连接心灵",
+        "connect hearts"
+      ],
+      [
+        "消除偏见",
+        "eliminate prejudice"
+      ],
+      [
+        "倡导平等",
+        "advocate equality"
+      ],
+      [
+        "捍卫自由",
+        "defend freedom"
+      ],
+      [
+        "追求正义",
+        "pursue justice"
+      ],
+      [
+        "服务人类",
+        "serve humanity"
+      ],
+      [
+        "造福世界",
+        "benefit the world"
+      ],
+      [
+        "减少不平等",
+        "reduce inequality"
+      ],
+      [
+        "促进包容",
+        "promote inclusion"
+      ],
+      [
+        "保护弱势",
+        "protect the vulnerable"
+      ],
+      [
+        "倾听声音",
+        "listen to voices"
+      ],
+      [
+        "搭建桥梁",
+        "build bridges"
+      ],
+      [
+        "打破壁垒",
+        "break barriers"
+      ],
+      [
+        "凝聚共识",
+        "build consensus"
+      ],
+      [
+        "汇聚力量",
+        "gather strength"
+      ],
+      [
+        "面向未来",
+        "face the future"
+      ],
+      [
+        "携手前行",
+        "move forward together"
+      ],
+      [
+        "共克时艰",
+        "overcome difficulties together"
+      ],
+      [
+        "同舟共济",
+        "share the same boat"
+      ],
+      [
+        "守望相助",
+        "watch and help each other"
+      ],
+      [
+        "和衷共济",
+        "work together in crisis"
+      ],
+      [
+        "求同存异",
+        "seek common ground while reserving differences"
+      ],
+      [
+        "聚沙成塔",
+        "gather sand to build a tower"
+      ],
+      [
+        "集思广益",
+        "pool wisdom"
+      ],
+      [
+        "群策群力",
+        "brainstorm and collaborate"
+      ],
+      [
+        "同甘共苦",
+        "share joys and sorrows"
+      ]
+    ],
+    "sources": [
+      "联合国",
+      "联合国教科文组织",
+      "世界卫生组织",
+      "国际法",
+      "世界人权宣言",
+      "巴黎协定",
+      "可持续发展目标",
+      "全球治理",
+      "跨文化对话",
+      "人类命运共同体",
+      "世界公民",
+      "全球化",
+      "国际合作",
+      "和平学",
+      "发展经济学",
+      "全球伦理",
+      "文明对话",
+      "甘地",
+      "曼德拉",
+      "马丁·路德·金",
+      "爱因斯坦",
+      "联合国宪章"
+    ]
+  },
+  "星际文明": {
+    "dim_zh": "星际文明",
+    "dim_en": "interstellar civilization",
+    "concepts": [
+      [
+        "宇宙",
+        "the universe"
+      ],
+      [
+        "星系",
+        "galaxy"
+      ],
+      [
+        "恒星",
+        "star"
+      ],
+      [
+        "行星",
+        "planet"
+      ],
+      [
+        "黑洞",
+        "black hole"
+      ],
+      [
+        "光年",
+        "light-year"
+      ],
+      [
+        "时空",
+        "spacetime"
+      ],
+      [
+        "维度",
+        "dimension"
+      ],
+      [
+        "量子",
+        "quantum"
+      ],
+      [
+        "引力",
+        "gravity"
+      ],
+      [
+        "光速",
+        "speed of light"
+      ],
+      [
+        "能量",
+        "energy"
+      ],
+      [
+        "物质",
+        "matter"
+      ],
+      [
+        "暗物质",
+        "dark matter"
+      ],
+      [
+        "暗能量",
+        "dark energy"
+      ],
+      [
+        "熵",
+        "entropy"
+      ],
+      [
+        "奇点",
+        "singularity"
+      ],
+      [
+        "虫洞",
+        "wormhole"
+      ],
+      [
+        "多元宇宙",
+        "multiverse"
+      ],
+      [
+        "大爆炸",
+        "Big Bang"
+      ],
+      [
+        "星际旅行",
+        "interstellar travel"
+      ],
+      [
+        "文明等级",
+        "civilization level"
+      ],
+      [
+        "外星生命",
+        "extraterrestrial life"
+      ],
+      [
+        "智慧",
+        "intelligence"
+      ],
+      [
+        "意识",
+        "consciousness"
+      ],
+      [
+        "探索",
+        "exploration"
+      ],
+      [
+        "发现",
+        "discovery"
+      ],
+      [
+        "无限",
+        "infinity"
+      ],
+      [
+        "永恒",
+        "eternity"
+      ],
+      [
+        "起源",
+        "origin"
+      ],
+      [
+        "终结",
+        "the end"
+      ],
+      [
+        "演化",
+        "evolution"
+      ],
+      [
+        "创造",
+        "creation"
+      ],
+      [
+        "毁灭",
+        "destruction"
+      ],
+      [
+        "重生",
+        "rebirth"
+      ],
+      [
+        "时间",
+        "time"
+      ],
+      [
+        "空间",
+        "space"
+      ],
+      [
+        "因果",
+        "causality"
+      ],
+      [
+        "命运",
+        "destiny"
+      ],
+      [
+        "存在",
+        "existence"
+      ],
+      [
+        "虚无",
+        "nothingness"
+      ],
+      [
+        "真理",
+        "truth"
+      ],
+      [
+        "奥秘",
+        "mystery"
+      ],
+      [
+        "超越",
+        "transcendence"
+      ],
+      [
+        "极限",
+        "limit"
+      ],
+      [
+        "未知",
+        "the unknown"
+      ],
+      [
+        "深渊",
+        "the abyss"
+      ]
+    ],
+    "actions": [
+      [
+        "探索宇宙",
+        "explore the universe"
+      ],
+      [
+        "穿越星系",
+        "traverse galaxies"
+      ],
+      [
+        "理解时空",
+        "understand spacetime"
+      ],
+      [
+        "解码物质",
+        "decode matter"
+      ],
+      [
+        "追寻起源",
+        "pursue origins"
+      ],
+      [
+        "面对未知",
+        "face the unknown"
+      ],
+      [
+        "超越极限",
+        "transcend limits"
+      ],
+      [
+        "想象无限",
+        "imagine infinity"
+      ],
+      [
+        "测量光年",
+        "measure light-years"
+      ],
+      [
+        "观测星云",
+        "observe nebulae"
+      ],
+      [
+        "计算引力",
+        "calculate gravity"
+      ],
+      [
+        "揭示奥秘",
+        "reveal mysteries"
+      ],
+      [
+        "穿越虫洞",
+        "traverse wormholes"
+      ],
+      [
+        "凝视黑洞",
+        "gaze at black holes"
+      ],
+      [
+        "寻找生命",
+        "search for life"
+      ],
+      [
+        "聆听信号",
+        "listen for signals"
+      ],
+      [
+        "突破光障",
+        "break the light barrier"
+      ],
+      [
+        "理解意识",
+        "understand consciousness"
+      ],
+      [
+        "追问存在",
+        "question existence"
+      ],
+      [
+        "拥抱永恒",
+        "embrace eternity"
+      ],
+      [
+        "仰望星空",
+        "look up at the stars"
+      ],
+      [
+        "丈量宇宙",
+        "measure the universe"
+      ],
+      [
+        "航行星际",
+        "navigate interstellar space"
+      ],
+      [
+        "解读宇宙",
+        "decode the cosmos"
+      ],
+      [
+        "旅行到时空尽头",
+        "travel to the end of spacetime"
+      ],
+      [
+        "见证诞生",
+        "witness creation"
+      ],
+      [
+        "对抗熵增",
+        "counter entropy"
+      ],
+      [
+        "创造新世界",
+        "create new worlds"
+      ],
+      [
+        "理解万物",
+        "understand all things"
+      ],
+      [
+        "追问为什么",
+        "ask why"
+      ],
+      [
+        "寻找规律",
+        "find patterns"
+      ],
+      [
+        "发现秩序",
+        "discover order"
+      ],
+      [
+        "面对浩瀚",
+        "face the vastness"
+      ],
+      [
+        "保持谦卑",
+        "remain humble"
+      ],
+      [
+        "仰望深渊",
+        "gaze into the abyss"
+      ],
+      [
+        "跨越维度",
+        "cross dimensions"
+      ]
+    ],
+    "sources": [
+      "卡尔·萨根",
+      "爱因斯坦",
+      "霍金",
+      "牛顿",
+      "伽利略",
+      "哥白尼",
+      "开普勒",
+      "齐奥尔科夫斯基",
+      "阿瑟·克拉克",
+      "刘慈欣",
+      "NASA",
+      "ESA",
+      "宇宙学",
+      "量子物理",
+      "相对论",
+      "天体物理学",
+      "科幻文学",
+      "《星际迷航》",
+      "《银河系漫游指南》",
+      "《三体》"
+    ]
+  },
+  "个人成长": {
+    "dim_zh": "个人成长",
+    "dim_en": "personal growth",
+    "concepts": [
+      [
+        "自律",
+        "self-discipline"
+      ],
+      [
+        "毅力",
+        "perseverance"
+      ],
+      [
+        "勇气",
+        "courage"
+      ],
+      [
+        "信心",
+        "confidence"
+      ],
+      [
+        "专注",
+        "focus"
+      ],
+      [
+        "耐心",
+        "patience"
+      ],
+      [
+        "坚韧",
+        "resilience"
+      ],
+      [
+        "谦逊",
+        "humility"
+      ],
+      [
+        "成长",
+        "growth"
+      ],
+      [
+        "突破",
+        "breakthrough"
+      ],
+      [
+        "蜕变",
+        "transformation"
+      ],
+      [
+        "觉醒",
+        "awakening"
+      ],
+      [
+        "习惯",
+        "habit"
+      ],
+      [
+        "目标",
+        "goal"
+      ],
+      [
+        "梦想",
+        "dream"
+      ],
+      [
+        "热情",
+        "passion"
+      ],
+      [
+        "行动",
+        "action"
+      ],
+      [
+        "坚持",
+        "persistence"
+      ],
+      [
+        "努力",
+        "effort"
+      ],
+      [
+        "勤奋",
+        "diligence"
+      ],
+      [
+        "自律",
+        "self-control"
+      ],
+      [
+        "时间",
+        "time"
+      ],
+      [
+        "精力",
+        "energy"
+      ],
+      [
+        "注意力",
+        "attention"
+      ],
+      [
+        "学习",
+        "learning"
+      ],
+      [
+        "反思",
+        "reflection"
+      ],
+      [
+        "改进",
+        "improvement"
+      ],
+      [
+        "优化",
+        "optimization"
+      ],
+      [
+        "潜能",
+        "potential"
+      ],
+      [
+        "天赋",
+        "talent"
+      ],
+      [
+        "技能",
+        "skill"
+      ],
+      [
+        "能力",
+        "ability"
+      ],
+      [
+        "心态",
+        "mindset"
+      ],
+      [
+        "信念",
+        "belief"
+      ],
+      [
+        "价值观",
+        "values"
+      ],
+      [
+        "使命",
+        "mission"
+      ],
+      [
+        "意义",
+        "meaning"
+      ],
+      [
+        "幸福",
+        "happiness"
+      ],
+      [
+        "满足",
+        "fulfillment"
+      ],
+      [
+        "平衡",
+        "balance"
+      ],
+      [
+        "健康",
+        "health"
+      ],
+      [
+        "情绪",
+        "emotion"
+      ],
+      [
+        "压力",
+        "stress"
+      ],
+      [
+        "恢复",
+        "recovery"
+      ]
+    ],
+    "actions": [
+      [
+        "设定目标",
+        "set goals"
+      ],
+      [
+        "培养习惯",
+        "build habits"
+      ],
+      [
+        "管理时间",
+        "manage time"
+      ],
+      [
+        "提升专注",
+        "improve focus"
+      ],
+      [
+        "克服恐惧",
+        "overcome fear"
+      ],
+      [
+        "拥抱变化",
+        "embrace change"
+      ],
+      [
+        "走出舒适区",
+        "step out of the comfort zone"
+      ],
+      [
+        "持续学习",
+        "keep learning"
+      ],
+      [
+        "刻意练习",
+        "practice deliberately"
+      ],
+      [
+        "定期反思",
+        "reflect regularly"
+      ],
+      [
+        "接受失败",
+        "accept failure"
+      ],
+      [
+        "从错误中学习",
+        "learn from mistakes"
+      ],
+      [
+        "保持好奇心",
+        "stay curious"
+      ],
+      [
+        "发展优势",
+        "develop strengths"
+      ],
+      [
+        "管理情绪",
+        "manage emotions"
+      ],
+      [
+        "培养耐心",
+        "cultivate patience"
+      ],
+      [
+        "建立自信",
+        "build confidence"
+      ],
+      [
+        "找到热情",
+        "find passion"
+      ],
+      [
+        "追求卓越",
+        "pursue excellence"
+      ],
+      [
+        "保持健康",
+        "stay healthy"
+      ],
+      [
+        "深度工作",
+        "work deeply"
+      ],
+      [
+        "学会说不",
+        "learn to say no"
+      ],
+      [
+        "简化生活",
+        "simplify life"
+      ],
+      [
+        "冥想静心",
+        "meditate and center"
+      ],
+      [
+        "阅读思考",
+        "read and think"
+      ],
+      [
+        "写作输出",
+        "write and output"
+      ],
+      [
+        "锻炼身体",
+        "exercise the body"
+      ],
+      [
+        "充足睡眠",
+        "get enough sleep"
+      ],
+      [
+        "营养均衡",
+        "eat balanced"
+      ],
+      [
+        "数字排毒",
+        "digital detox"
+      ],
+      [
+        "晨间仪式",
+        "morning routine"
+      ],
+      [
+        "晚间复盘",
+        "evening review"
+      ],
+      [
+        "寻找导师",
+        "find a mentor"
+      ],
+      [
+        "帮助他人",
+        "help others"
+      ],
+      [
+        "记录感恩",
+        "practice gratitude"
+      ],
+      [
+        "可视化未来",
+        "visualize the future"
+      ]
+    ],
+    "sources": [
+      "自我提升",
+      "心理学",
+      "积极心理学",
+      "认知科学",
+      "习惯研究",
+      "时间管理",
+      "成长型思维",
+      "马丁·塞利格曼",
+      "卡罗尔·德韦克",
+      "安德斯·埃里克森",
+      "詹姆斯·克利尔",
+      "卡尔·纽波特",
+      "蒂亚戈·福特",
+      "现代心理学"
+    ]
+  },
+  "团队力量": {
+    "dim_zh": "团队力量",
+    "dim_en": "team power",
+    "concepts": [
+      [
+        "协作",
+        "collaboration"
+      ],
+      [
+        "信任",
+        "trust"
+      ],
+      [
+        "沟通",
+        "communication"
+      ],
+      [
+        "领导力",
+        "leadership"
+      ],
+      [
+        "愿景",
+        "vision"
+      ],
+      [
+        "使命",
+        "mission"
+      ],
+      [
+        "目标",
+        "goal"
+      ],
+      [
+        "执行",
+        "execution"
+      ],
+      [
+        "分工",
+        "division of labor"
+      ],
+      [
+        "协调",
+        "coordination"
+      ],
+      [
+        "激励",
+        "motivation"
+      ],
+      [
+        "赋能",
+        "empowerment"
+      ],
+      [
+        "凝聚",
+        "cohesion"
+      ],
+      [
+        "共识",
+        "consensus"
+      ],
+      [
+        "多元",
+        "diversity"
+      ],
+      [
+        "包容",
+        "inclusion"
+      ],
+      [
+        "责任",
+        "responsibility"
+      ],
+      [
+        "担当",
+        "accountability"
+      ],
+      [
+        "透明",
+        "transparency"
+      ],
+      [
+        "诚实",
+        "honesty"
+      ],
+      [
+        "反馈",
+        "feedback"
+      ],
+      [
+        "改进",
+        "improvement"
+      ],
+      [
+        "创新",
+        "innovation"
+      ],
+      [
+        "敏捷",
+        "agility"
+      ],
+      [
+        "团队精神",
+        "team spirit"
+      ],
+      [
+        "集体智慧",
+        "collective intelligence"
+      ],
+      [
+        "协同效应",
+        "synergy"
+      ],
+      [
+        "共同目标",
+        "shared goal"
+      ],
+      [
+        "相互尊重",
+        "mutual respect"
+      ],
+      [
+        "心理安全",
+        "psychological safety"
+      ],
+      [
+        "角色清晰",
+        "role clarity"
+      ],
+      [
+        "优势互补",
+        "complementary strengths"
+      ],
+      [
+        "冲突管理",
+        "conflict management"
+      ],
+      [
+        "决策",
+        "decision-making"
+      ],
+      [
+        "授权",
+        "delegation"
+      ],
+      [
+        "指导",
+        "mentoring"
+      ],
+      [
+        "教练",
+        "coaching"
+      ],
+      [
+        "成长",
+        "growth"
+      ],
+      [
+        "成就",
+        "achievement"
+      ],
+      [
+        "归属感",
+        "belonging"
+      ],
+      [
+        "认同感",
+        "identity"
+      ],
+      [
+        "荣誉感",
+        "honor"
+      ],
+      [
+        "使命感",
+        "sense of mission"
+      ]
+    ],
+    "actions": [
+      [
+        "建立信任",
+        "build trust"
+      ],
+      [
+        "明确目标",
+        "clarify goals"
+      ],
+      [
+        "有效沟通",
+        "communicate effectively"
+      ],
+      [
+        "分工协作",
+        "divide and collaborate"
+      ],
+      [
+        "互相支持",
+        "support each other"
+      ],
+      [
+        "共享信息",
+        "share information"
+      ],
+      [
+        "共同决策",
+        "decide together"
+      ],
+      [
+        "庆祝成功",
+        "celebrate success"
+      ],
+      [
+        "面对失败",
+        "face failure together"
+      ],
+      [
+        "持续改进",
+        "continuously improve"
+      ],
+      [
+        "拥抱多元",
+        "embrace diversity"
+      ],
+      [
+        "激发创意",
+        "spark creativity"
+      ],
+      [
+        "解决冲突",
+        "resolve conflicts"
+      ],
+      [
+        "授权赋能",
+        "empower others"
+      ],
+      [
+        "培养 leader",
+        "develop leaders"
+      ],
+      [
+        "建立文化",
+        "build culture"
+      ],
+      [
+        "设定标准",
+        "set standards"
+      ],
+      [
+        "保持透明",
+        "stay transparent"
+      ],
+      [
+        "给予反馈",
+        "give feedback"
+      ],
+      [
+        "接受批评",
+        "accept criticism"
+      ],
+      [
+        "追求卓越",
+        "pursue excellence"
+      ],
+      [
+        "快速迭代",
+        "iterate quickly"
+      ],
+      [
+        "灵活应变",
+        "adapt flexibly"
+      ],
+      [
+        "聚焦重点",
+        "focus on priorities"
+      ],
+      [
+        "消除摩擦",
+        "reduce friction"
+      ],
+      [
+        "创建仪式",
+        "create rituals"
+      ],
+      [
+        "讲述故事",
+        "tell stories"
+      ],
+      [
+        "树立榜样",
+        "lead by example"
+      ],
+      [
+        "营造安全感",
+        "create safety"
+      ],
+      [
+        "鼓励冒险",
+        "encourage risk-taking"
+      ],
+      [
+        "容忍失败",
+        "tolerate failure"
+      ],
+      [
+        "认可贡献",
+        "recognize contributions"
+      ],
+      [
+        "公平分配",
+        "distribute fairly"
+      ],
+      [
+        "维护团结",
+        "maintain unity"
+      ],
+      [
+        "化解分歧",
+        "bridge differences"
+      ]
+    ],
+    "sources": [
+      "彼得·德鲁克",
+      "帕特里克·伦西奥尼",
+      "西蒙·斯涅克",
+      "艾米·埃德蒙森",
+      "谷歌亚里士多德计划",
+      "敏捷开发",
+      "团队动力学",
+      "组织行为学",
+      "领导力研究",
+      "哈佛商学院"
+    ]
+  },
+  "家庭和谐": {
+    "dim_zh": "家庭和谐",
+    "dim_en": "family harmony",
+    "concepts": [
+      [
+        "爱",
+        "love"
+      ],
+      [
+        "关怀",
+        "care"
+      ],
+      [
+        "尊重",
+        "respect"
+      ],
+      [
+        "理解",
+        "understanding"
+      ],
+      [
+        "包容",
+        "acceptance"
+      ],
+      [
+        "信任",
+        "trust"
+      ],
+      [
+        "陪伴",
+        "companionship"
+      ],
+      [
+        "倾听",
+        "listening"
+      ],
+      [
+        "温暖",
+        "warmth"
+      ],
+      [
+        "安全",
+        "security"
+      ],
+      [
+        "归属",
+        "belonging"
+      ],
+      [
+        "传承",
+        "heritage"
+      ],
+      [
+        "教育",
+        "education"
+      ],
+      [
+        "榜样",
+        "role model"
+      ],
+      [
+        "沟通",
+        "communication"
+      ],
+      [
+        "边界",
+        "boundaries"
+      ],
+      [
+        "责任",
+        "responsibility"
+      ],
+      [
+        "担当",
+        "commitment"
+      ],
+      [
+        "忠诚",
+        "loyalty"
+      ],
+      [
+        "耐心",
+        "patience"
+      ],
+      [
+        "宽恕",
+        "forgiveness"
+      ],
+      [
+        "感恩",
+        "gratitude"
+      ],
+      [
+        "传统",
+        "tradition"
+      ],
+      [
+        "仪式",
+        "ritual"
+      ],
+      [
+        "节日",
+        "festival"
+      ],
+      [
+        "团聚",
+        "reunion"
+      ],
+      [
+        "成长",
+        "growth"
+      ],
+      [
+        "记忆",
+        "memory"
+      ],
+      [
+        "家风",
+        "family values"
+      ],
+      [
+        "家教",
+        "upbringing"
+      ],
+      [
+        "孝道",
+        "filial piety"
+      ],
+      [
+        "和睦",
+        "harmony"
+      ],
+      [
+        "亲子",
+        "parent-child"
+      ],
+      [
+        "婚姻",
+        "marriage"
+      ],
+      [
+        "兄弟姐妹",
+        "siblings"
+      ],
+      [
+        "代际",
+        "intergenerational"
+      ],
+      [
+        "平衡",
+        "balance"
+      ],
+      [
+        "幸福",
+        "happiness"
+      ],
+      [
+        "健康",
+        "health"
+      ],
+      [
+        "快乐",
+        "joy"
+      ]
+    ],
+    "actions": [
+      [
+        "陪伴家人",
+        "spend time with family"
+      ],
+      [
+        "倾听孩子",
+        "listen to children"
+      ],
+      [
+        "表达爱意",
+        "express love"
+      ],
+      [
+        "共同进餐",
+        "share meals"
+      ],
+      [
+        "建立传统",
+        "build traditions"
+      ],
+      [
+        "庆祝节日",
+        "celebrate festivals"
+      ],
+      [
+        "解决冲突",
+        "resolve conflicts"
+      ],
+      [
+        "设定边界",
+        "set boundaries"
+      ],
+      [
+        "互相尊重",
+        "respect each other"
+      ],
+      [
+        "培养感情",
+        "nurture bonds"
+      ],
+      [
+        "分担责任",
+        "share responsibilities"
+      ],
+      [
+        "共同决策",
+        "make decisions together"
+      ],
+      [
+        "教育子女",
+        "educate children"
+      ],
+      [
+        "树立榜样",
+        "be a role model"
+      ],
+      [
+        "照顾老人",
+        "care for elders"
+      ],
+      [
+        "维系亲情",
+        "maintain kinship"
+      ],
+      [
+        "创造回忆",
+        "create memories"
+      ],
+      [
+        "传承家风",
+        "pass down values"
+      ],
+      [
+        "原谅过错",
+        "forgive mistakes"
+      ],
+      [
+        "感恩付出",
+        "appreciate efforts"
+      ],
+      [
+        "沟通心灵",
+        "connect hearts"
+      ],
+      [
+        "给予空间",
+        "give space"
+      ],
+      [
+        "支持梦想",
+        "support dreams"
+      ],
+      [
+        "面对困难",
+        "face challenges"
+      ],
+      [
+        "保持幽默",
+        "keep humor"
+      ],
+      [
+        "表达感谢",
+        "express gratitude"
+      ],
+      [
+        "定期团聚",
+        "reunite regularly"
+      ],
+      [
+        "放下手机",
+        "put down phones"
+      ],
+      [
+        "一起旅行",
+        "travel together"
+      ],
+      [
+        "共同阅读",
+        "read together"
+      ],
+      [
+        "家务分担",
+        "share chores"
+      ],
+      [
+        "理财规划",
+        "plan finances"
+      ],
+      [
+        "健康管理",
+        "manage health"
+      ],
+      [
+        "情绪支持",
+        "provide emotional support"
+      ]
+    ],
+    "sources": [
+      "家庭心理学",
+      "婚姻咨询",
+      "家庭教育",
+      "亲子关系研究",
+      "家庭治疗",
+      "传统文化",
+      "《礼记》",
+      "《孝经》",
+      "现代家庭研究"
+    ]
+  },
+  "国家治理": {
+    "dim_zh": "国家治理",
+    "dim_en": "national governance",
+    "concepts": [
+      [
+        "法治",
+        "rule of law"
+      ],
+      [
+        "民主",
+        "democracy"
+      ],
+      [
+        "公平",
+        "fairness"
+      ],
+      [
+        "正义",
+        "justice"
+      ],
+      [
+        "权力",
+        "power"
+      ],
+      [
+        "权利",
+        "rights"
+      ],
+      [
+        "义务",
+        "obligations"
+      ],
+      [
+        "责任",
+        "responsibility"
+      ],
+      [
+        "宪法",
+        "constitution"
+      ],
+      [
+        "制度",
+        "institution"
+      ],
+      [
+        "政策",
+        "policy"
+      ],
+      [
+        "改革",
+        "reform"
+      ],
+      [
+        "发展",
+        "development"
+      ],
+      [
+        "稳定",
+        "stability"
+      ],
+      [
+        "安全",
+        "security"
+      ],
+      [
+        "繁荣",
+        "prosperity"
+      ],
+      [
+        "公共服务",
+        "public service"
+      ],
+      [
+        "社会福利",
+        "social welfare"
+      ],
+      [
+        "教育公平",
+        "educational equity"
+      ],
+      [
+        "医疗保健",
+        "healthcare"
+      ],
+      [
+        "基础设施",
+        "infrastructure"
+      ],
+      [
+        "环境保护",
+        "environmental protection"
+      ],
+      [
+        "税收",
+        "taxation"
+      ],
+      [
+        "预算",
+        "budget"
+      ],
+      [
+        "监管",
+        "regulation"
+      ],
+      [
+        "透明度",
+        "transparency"
+      ],
+      [
+        "问责制",
+        "accountability"
+      ],
+      [
+        "反腐",
+        "anti-corruption"
+      ],
+      [
+        "司法独立",
+        "judicial independence"
+      ],
+      [
+        "分权制衡",
+        "checks and balances"
+      ],
+      [
+        "地方自治",
+        "local autonomy"
+      ],
+      [
+        "公民参与",
+        "civic participation"
+      ],
+      [
+        "言论自由",
+        "free speech"
+      ],
+      [
+        "新闻自由",
+        "press freedom"
+      ],
+      [
+        "集会自由",
+        "assembly freedom"
+      ],
+      [
+        "选举",
+        "election"
+      ],
+      [
+        "投票",
+        "voting"
+      ],
+      [
+        "代表",
+        "representation"
+      ],
+      [
+        "协商",
+        "deliberation"
+      ],
+      [
+        "外交",
+        "diplomacy"
+      ],
+      [
+        "国防",
+        "national defense"
+      ],
+      [
+        "软实力",
+        "soft power"
+      ]
+    ],
+    "actions": [
+      [
+        "推进改革",
+        "advance reform"
+      ],
+      [
+        "完善法治",
+        "improve the rule of law"
+      ],
+      [
+        "保障权利",
+        "protect rights"
+      ],
+      [
+        "促进公平",
+        "promote fairness"
+      ],
+      [
+        "打击腐败",
+        "fight corruption"
+      ],
+      [
+        "提高透明度",
+        "increase transparency"
+      ],
+      [
+        "优化制度",
+        "optimize institutions"
+      ],
+      [
+        "鼓励参与",
+        "encourage participation"
+      ],
+      [
+        "平衡发展",
+        "balance development"
+      ],
+      [
+        "维护稳定",
+        "maintain stability"
+      ],
+      [
+        "保障安全",
+        "ensure security"
+      ],
+      [
+        "改善民生",
+        "improve livelihoods"
+      ],
+      [
+        "投资教育",
+        "invest in education"
+      ],
+      [
+        "建设基础设施",
+        "build infrastructure"
+      ],
+      [
+        "保护环境",
+        "protect the environment"
+      ],
+      [
+        "促进创新",
+        "promote innovation"
+      ],
+      [
+        "简化行政",
+        "streamline administration"
+      ],
+      [
+        "数字治理",
+        "digital governance"
+      ],
+      [
+        "数据决策",
+        "data-driven decisions"
+      ],
+      [
+        "长期规划",
+        "long-term planning"
+      ],
+      [
+        "应急响应",
+        "emergency response"
+      ],
+      [
+        "危机管理",
+        "crisis management"
+      ],
+      [
+        "公众咨询",
+        "public consultation"
+      ],
+      [
+        "利益相关者",
+        "engage stakeholders"
+      ],
+      [
+        "绩效评估",
+        "performance evaluation"
+      ],
+      [
+        "持续改进",
+        "continuous improvement"
+      ],
+      [
+        "权力监督",
+        "supervise power"
+      ],
+      [
+        "司法公正",
+        "judicial justice"
+      ],
+      [
+        "立法科学",
+        "scientific legislation"
+      ],
+      [
+        "执法严格",
+        "strict law enforcement"
+      ],
+      [
+        "全民医保",
+        "universal healthcare"
+      ],
+      [
+        "养老保障",
+        "pension security"
+      ],
+      [
+        "住房保障",
+        "housing security"
+      ],
+      [
+        "食品安全",
+        "food safety"
+      ]
+    ],
+    "sources": [
+      "亚里士多德",
+      "柏拉图",
+      "卢梭",
+      "孟德斯鸠",
+      "洛克",
+      "托克维尔",
+      "汉密尔顿",
+      "麦迪逊",
+      "韦伯",
+      "亨廷顿",
+      "福山",
+      "政治学",
+      "公共管理",
+      "法治理论",
+      "治理研究"
+    ]
+  },
+  "地球家园": {
+    "dim_zh": "地球家园",
+    "dim_en": "our Earth home",
+    "concepts": [
+      [
+        "生态",
+        "ecology"
+      ],
+      [
+        "环境",
+        "environment"
+      ],
+      [
+        "气候",
+        "climate"
+      ],
+      [
+        "生物多样性",
+        "biodiversity"
+      ],
+      [
+        "森林",
+        "forest"
+      ],
+      [
+        "海洋",
+        "ocean"
+      ],
+      [
+        "湿地",
+        "wetland"
+      ],
+      [
+        "土壤",
+        "soil"
+      ],
+      [
+        "水",
+        "water"
+      ],
+      [
+        "空气",
+        "air"
+      ],
+      [
+        "能源",
+        "energy"
+      ],
+      [
+        "碳",
+        "carbon"
+      ],
+      [
+        "可持续",
+        "sustainability"
+      ],
+      [
+        "绿色",
+        "green"
+      ],
+      [
+        "自然",
+        "nature"
+      ],
+      [
+        "地球",
+        "Earth"
+      ],
+      [
+        "保护",
+        "protection"
+      ],
+      [
+        "修复",
+        "restoration"
+      ],
+      [
+        "平衡",
+        "balance"
+      ],
+      [
+        "循环",
+        "circularity"
+      ],
+      [
+        "污染",
+        "pollution"
+      ],
+      [
+        "排放",
+        "emissions"
+      ],
+      [
+        "废物",
+        "waste"
+      ],
+      [
+        "塑料",
+        "plastic"
+      ],
+      [
+        "灭绝",
+        "extinction"
+      ],
+      [
+        "保护",
+        "conservation"
+      ],
+      [
+        "栖息地",
+        "habitat"
+      ],
+      [
+        "物种",
+        "species"
+      ],
+      [
+        "可再生能源",
+        "renewable energy"
+      ],
+      [
+        "太阳能",
+        "solar energy"
+      ],
+      [
+        "风能",
+        "wind energy"
+      ],
+      [
+        "核能",
+        "nuclear energy"
+      ],
+      [
+        "碳中和",
+        "carbon neutrality"
+      ],
+      [
+        "碳捕获",
+        "carbon capture"
+      ],
+      [
+        "生态足迹",
+        "ecological footprint"
+      ],
+      [
+        "行星边界",
+        "planetary boundaries"
+      ],
+      [
+        "代际公平",
+        "intergenerational equity"
+      ],
+      [
+        "环境正义",
+        "environmental justice"
+      ],
+      [
+        "气候变化",
+        "climate change"
+      ],
+      [
+        "全球变暖",
+        "global warming"
+      ],
+      [
+        "海平面上升",
+        "sea level rise"
+      ],
+      [
+        "沙漠化",
+        "desertification"
+      ],
+      [
+        "森林砍伐",
+        "deforestation"
+      ],
+      [
+        "过度捕捞",
+        "overfishing"
+      ]
+    ],
+    "actions": [
+      [
+        "保护环境",
+        "protect the environment"
+      ],
+      [
+        "减少排放",
+        "reduce emissions"
+      ],
+      [
+        "节约能源",
+        "conserve energy"
+      ],
+      [
+        "节约用水",
+        "save water"
+      ],
+      [
+        "植树造林",
+        "plant trees"
+      ],
+      [
+        "减少废物",
+        "reduce waste"
+      ],
+      [
+        "回收利用",
+        "recycle"
+      ],
+      [
+        "使用清洁能源",
+        "use clean energy"
+      ],
+      [
+        "保护物种",
+        "protect species"
+      ],
+      [
+        "修复生态",
+        "restore ecosystems"
+      ],
+      [
+        "减少塑料",
+        "reduce plastic"
+      ],
+      [
+        "绿色出行",
+        "travel green"
+      ],
+      [
+        "本地食物",
+        "eat local"
+      ],
+      [
+        "素食减碳",
+        "eat plant-based"
+      ],
+      [
+        "碳补偿",
+        "offset carbon"
+      ],
+      [
+        "可持续消费",
+        "consume sustainably"
+      ],
+      [
+        "环保教育",
+        "environmental education"
+      ],
+      [
+        "公民科学",
+        "citizen science"
+      ],
+      [
+        "保护海洋",
+        "protect oceans"
+      ],
+      [
+        "保护森林",
+        "protect forests"
+      ],
+      [
+        "清洁能源转型",
+        "transition to clean energy"
+      ],
+      [
+        "循环经济",
+        "build circular economy"
+      ],
+      [
+        "零废弃生活",
+        "live zero-waste"
+      ],
+      [
+        "生态农业",
+        "practice eco-agriculture"
+      ],
+      [
+        "城市绿化",
+        "green the city"
+      ],
+      [
+        "保护湿地",
+        "protect wetlands"
+      ],
+      [
+        "减少光污染",
+        "reduce light pollution"
+      ],
+      [
+        "减少噪声",
+        "reduce noise"
+      ],
+      [
+        "保护蜜蜂",
+        "protect bees"
+      ],
+      [
+        "海洋保护区",
+        "create marine reserves"
+      ],
+      [
+        "可持续 fishing",
+        "fish sustainably"
+      ],
+      [
+        "土壤保护",
+        "protect soil"
+      ],
+      [
+        "地下水保护",
+        "protect groundwater"
+      ],
+      [
+        "生物防治",
+        "biological pest control"
+      ]
+    ],
+    "sources": [
+      "蕾切尔·卡森",
+      "奥尔多·利奥波德",
+      "詹姆斯·洛夫洛克",
+      "联合国环境规划署",
+      "IPCC",
+      "WWF",
+      "联合国气候变化框架公约",
+      "巴黎协定",
+      "生态学",
+      "环境科学",
+      "地球系统科学",
+      "保护生物学"
+    ]
+  },
+  "思维认知": {
+    "dim_zh": "思维认知",
+    "dim_en": "cognitive thinking",
+    "concepts": [
+      [
+        "思维",
+        "thinking"
+      ],
+      [
+        "认知",
+        "cognition"
+      ],
+      [
+        "逻辑",
+        "logic"
+      ],
+      [
+        "理性",
+        "reason"
+      ],
+      [
+        "直觉",
+        "intuition"
+      ],
+      [
+        "洞察",
+        "insight"
+      ],
+      [
+        "批判性",
+        "critical"
+      ],
+      [
+        "创造性",
+        "creative"
+      ],
+      [
+        "分析",
+        "analysis"
+      ],
+      [
+        "综合",
+        "synthesis"
+      ],
+      [
+        "归纳",
+        "induction"
+      ],
+      [
+        "演绎",
+        "deduction"
+      ],
+      [
+        "抽象",
+        "abstraction"
+      ],
+      [
+        "具象",
+        "concrete"
+      ],
+      [
+        "系统",
+        "system"
+      ],
+      [
+        "整体",
+        "holistic"
+      ],
+      [
+        "模式",
+        "pattern"
+      ],
+      [
+        "关联",
+        "connection"
+      ],
+      [
+        "因果",
+        "causality"
+      ],
+      [
+        "相关",
+        "correlation"
+      ],
+      [
+        "偏见",
+        "bias"
+      ],
+      [
+        "盲点",
+        "blind spot"
+      ],
+      [
+        "谬误",
+        "fallacy"
+      ],
+      [
+        "悖论",
+        "paradox"
+      ],
+      [
+        "框架",
+        "framework"
+      ],
+      [
+        "模型",
+        "model"
+      ],
+      [
+        "假设",
+        "hypothesis"
+      ],
+      [
+        "验证",
+        "verification"
+      ],
+      [
+        "证伪",
+        "falsification"
+      ],
+      [
+        "范式",
+        "paradigm"
+      ],
+      [
+        "元认知",
+        "metacognition"
+      ],
+      [
+        "第一性原理",
+        "first principles"
+      ],
+      [
+        "系统思维",
+        "systems thinking"
+      ],
+      [
+        "设计思维",
+        "design thinking"
+      ],
+      [
+        "批判性思维",
+        "critical thinking"
+      ],
+      [
+        " lateral thinking",
+        "lateral thinking"
+      ],
+      [
+        "深度思考",
+        "deep thinking"
+      ],
+      [
+        "战略思维",
+        "strategic thinking"
+      ],
+      [
+        "逆向思维",
+        "reverse thinking"
+      ],
+      [
+        "概率思维",
+        "probabilistic thinking"
+      ],
+      [
+        "长期思维",
+        "long-term thinking"
+      ]
+    ],
+    "actions": [
+      [
+        "深度思考",
+        "think deeply"
+      ],
+      [
+        "质疑假设",
+        "question assumptions"
+      ],
+      [
+        "寻找模式",
+        "find patterns"
+      ],
+      [
+        "建立模型",
+        "build models"
+      ],
+      [
+        "打破框架",
+        "break frameworks"
+      ],
+      [
+        "转换视角",
+        "shift perspectives"
+      ],
+      [
+        "避免偏见",
+        "avoid bias"
+      ],
+      [
+        "检验逻辑",
+        "examine logic"
+      ],
+      [
+        "收集证据",
+        "gather evidence"
+      ],
+      [
+        "评估论证",
+        "evaluate arguments"
+      ],
+      [
+        "区分因果和相关",
+        "distinguish causation from correlation"
+      ],
+      [
+        "反思思维",
+        "reflect on thinking"
+      ],
+      [
+        "升级认知",
+        "upgrade cognition"
+      ],
+      [
+        "刻意练习思考",
+        "practice thinking deliberately"
+      ],
+      [
+        "跨学科思考",
+        "think across disciplines"
+      ],
+      [
+        "系统性思考",
+        "think systematically"
+      ],
+      [
+        "逆向推理",
+        "reason backward"
+      ],
+      [
+        "假设检验",
+        "test hypotheses"
+      ],
+      [
+        "思维实验",
+        "thought experiments"
+      ],
+      [
+        "类比推理",
+        "reason by analogy"
+      ],
+      [
+        "简化复杂",
+        "simplify complexity"
+      ],
+      [
+        "拆解问题",
+        "decompose problems"
+      ],
+      [
+        "寻找第一性原理",
+        "find first principles"
+      ],
+      [
+        "挑战共识",
+        "challenge consensus"
+      ],
+      [
+        "拥抱不确定性",
+        "embrace uncertainty"
+      ],
+      [
+        "概率推理",
+        "reason probabilistically"
+      ],
+      [
+        "长期思考",
+        "think long-term"
+      ],
+      [
+        "多角度分析",
+        "analyze from multiple angles"
+      ],
+      [
+        "识别谬误",
+        "identify fallacies"
+      ],
+      [
+        "克服盲点",
+        "overcome blind spots"
+      ],
+      [
+        "提升元认知",
+        "improve metacognition"
+      ],
+      [
+        "练习正念",
+        "practice mindfulness"
+      ],
+      [
+        "写作思考",
+        "write to think"
+      ],
+      [
+        "对话辩论",
+        "dialogue and debate"
+      ]
+    ],
+    "sources": [
+      "丹尼尔·卡尼曼",
+      "卡尔·波普尔",
+      "托马斯·库恩",
+      "爱德华·德博诺",
+      "彼得·圣吉",
+      "瑞·达利欧",
+      "查理·芒格",
+      "认知科学",
+      "逻辑学",
+      "科学哲学",
+      "心理学"
+    ]
+  },
+  "语言力量": {
+    "dim_zh": "语言力量",
+    "dim_en": "the power of language",
+    "concepts": [
+      [
+        "语言",
+        "language"
+      ],
+      [
+        "文字",
+        "writing"
+      ],
+      [
+        "演讲",
+        "speech"
+      ],
+      [
+        "对话",
+        "dialogue"
+      ],
+      [
+        "故事",
+        "story"
+      ],
+      [
+        "叙事",
+        "narrative"
+      ],
+      [
+        "修辞",
+        "rhetoric"
+      ],
+      [
+        "隐喻",
+        "metaphor"
+      ],
+      [
+        "沟通",
+        "communication"
+      ],
+      [
+        "表达",
+        "expression"
+      ],
+      [
+        "倾听",
+        "listening"
+      ],
+      [
+        "理解",
+        "understanding"
+      ],
+      [
+        "翻译",
+        "translation"
+      ],
+      [
+        "传播",
+        "communication"
+      ],
+      [
+        "说服",
+        "persuasion"
+      ],
+      [
+        "谈判",
+        "negotiation"
+      ],
+      [
+        "写作",
+        "writing"
+      ],
+      [
+        "阅读",
+        "reading"
+      ],
+      [
+        "朗诵",
+        "recitation"
+      ],
+      [
+        "辩论",
+        "debate"
+      ],
+      [
+        "词汇",
+        "vocabulary"
+      ],
+      [
+        "语法",
+        "grammar"
+      ],
+      [
+        "语义",
+        "semantics"
+      ],
+      [
+        "语用",
+        "pragmatics"
+      ],
+      [
+        "多语",
+        "multilingualism"
+      ],
+      [
+        "母语",
+        "mother tongue"
+      ],
+      [
+        "世界语",
+        "Esperanto"
+      ],
+      [
+        "语言习得",
+        "language acquisition"
+      ],
+      [
+        "语言学",
+        "linguistics"
+      ],
+      [
+        "话语权",
+        "discourse power"
+      ],
+      [
+        "话语体系",
+        "discourse system"
+      ],
+      [
+        "文化输出",
+        "cultural output"
+      ],
+      [
+        "信息",
+        "information"
+      ],
+      [
+        "知识",
+        "knowledge"
+      ],
+      [
+        "智慧",
+        "wisdom"
+      ],
+      [
+        "真理",
+        "truth"
+      ],
+      [
+        "命名",
+        "naming"
+      ],
+      [
+        "定义",
+        "definition"
+      ],
+      [
+        "概念",
+        "concept"
+      ],
+      [
+        "范畴",
+        "category"
+      ]
+    ],
+    "actions": [
+      [
+        "善用语言",
+        "use language well"
+      ],
+      [
+        "精准表达",
+        "express precisely"
+      ],
+      [
+        "倾听理解",
+        "listen to understand"
+      ],
+      [
+        "讲述故事",
+        "tell stories"
+      ],
+      [
+        "构建叙事",
+        "build narratives"
+      ],
+      [
+        "运用修辞",
+        "use rhetoric"
+      ],
+      [
+        "创造隐喻",
+        "create metaphors"
+      ],
+      [
+        "跨文化沟通",
+        "communicate across cultures"
+      ],
+      [
+        "学习语言",
+        "learn languages"
+      ],
+      [
+        "翻译桥梁",
+        "bridge through translation"
+      ],
+      [
+        "传播思想",
+        "spread ideas"
+      ],
+      [
+        "说服他人",
+        "persuade others"
+      ],
+      [
+        "有效写作",
+        "write effectively"
+      ],
+      [
+        "公开演讲",
+        "speak publicly"
+      ],
+      [
+        "参与对话",
+        "engage in dialogue"
+      ],
+      [
+        "理性辩论",
+        "debate rationally"
+      ],
+      [
+        "丰富词汇",
+        "enrich vocabulary"
+      ],
+      [
+        "精炼语言",
+        "refine language"
+      ],
+      [
+        "命名事物",
+        "name things"
+      ],
+      [
+        "定义概念",
+        "define concepts"
+      ],
+      [
+        "构建话语",
+        "build discourse"
+      ],
+      [
+        "掌握叙事",
+        "master narrative"
+      ],
+      [
+        "避免歧义",
+        "avoid ambiguity"
+      ],
+      [
+        "言简意赅",
+        "be concise"
+      ],
+      [
+        "以理服人",
+        "persuade with reason"
+      ],
+      [
+        "以情动人",
+        "move with emotion"
+      ],
+      [
+        "读写结合",
+        "combine reading and writing"
+      ],
+      [
+        "朗诵经典",
+        "recite classics"
+      ],
+      [
+        "学习多语",
+        "learn multiple languages"
+      ],
+      [
+        "保护母语",
+        "protect mother tongue"
+      ],
+      [
+        "跨语言交流",
+        "communicate across languages"
+      ],
+      [
+        "语言创新",
+        "innovate language"
+      ],
+      [
+        "记录历史",
+        "record history"
+      ],
+      [
+        "传承文化",
+        "pass on culture"
+      ]
+    ],
+    "sources": [
+      "维特根斯坦",
+      "索绪尔",
+      "乔姆斯基",
+      "修辞学",
+      "语言学",
+      "传播学",
+      "叙事学",
+      "翻译学",
+      "认知语言学",
+      "社会语言学"
+    ]
+  },
+  "墨家科技": {
+    "dim_zh": "墨家科技",
+    "dim_en": "Mohist technology",
+    "concepts": [
+      [
+        "兼爱",
+        "universal love"
+      ],
+      [
+        "非攻",
+        "non-aggression"
+      ],
+      [
+        "尚贤",
+        "meritocracy"
+      ],
+      [
+        "尚同",
+        "conformity"
+      ],
+      [
+        "节用",
+        "frugality"
+      ],
+      [
+        "节葬",
+        "simple burial"
+      ],
+      [
+        "天志",
+        "will of heaven"
+      ],
+      [
+        "明鬼",
+        "spirit awareness"
+      ],
+      [
+        "非乐",
+        "against extravagance"
+      ],
+      [
+        "非命",
+        "against fatalism"
+      ],
+      [
+        "三表法",
+        "triple criterion"
+      ],
+      [
+        "辩学",
+        "logic"
+      ],
+      [
+        "光学",
+        "optics"
+      ],
+      [
+        "力学",
+        "mechanics"
+      ],
+      [
+        "城防",
+        "fortification"
+      ],
+      [
+        "机关术",
+        "mechanism"
+      ],
+      [
+        "工艺",
+        "craftsmanship"
+      ],
+      [
+        "测量",
+        "measurement"
+      ],
+      [
+        "几何",
+        "geometry"
+      ],
+      [
+        "数学",
+        "mathematics"
+      ],
+      [
+        "技术创新",
+        "technological innovation"
+      ],
+      [
+        "实用主义",
+        "pragmatism"
+      ],
+      [
+        "科学精神",
+        "scientific spirit"
+      ],
+      [
+        "实验验证",
+        "experimental verification"
+      ],
+      [
+        "工程思维",
+        "engineering thinking"
+      ],
+      [
+        "系统设计",
+        "systematic design"
+      ],
+      [
+        "逻辑推理",
+        "logical reasoning"
+      ],
+      [
+        "因果分析",
+        "causal analysis"
+      ],
+      [
+        "知识论",
+        "epistemology"
+      ],
+      [
+        "方法论",
+        "methodology"
+      ],
+      [
+        "标准化",
+        "standardization"
+      ],
+      [
+        "规格化",
+        "specification"
+      ],
+      [
+        "质量控制",
+        "quality control"
+      ],
+      [
+        "效率优先",
+        "efficiency first"
+      ],
+      [
+        "实用导向",
+        "practical orientation"
+      ],
+      [
+        "技术伦理",
+        "tech ethics"
+      ],
+      [
+        "科技向善",
+        "tech for good"
+      ],
+      [
+        "开放共享",
+        "open sharing"
+      ],
+      [
+        "协同创新",
+        "collaborative innovation"
+      ]
+    ],
+    "actions": [
+      [
+        "实践兼爱",
+        "practice universal love"
+      ],
+      [
+        "反对侵略",
+        "oppose aggression"
+      ],
+      [
+        "崇尚贤能",
+        "value merit"
+      ],
+      [
+        "节约资源",
+        "conserve resources"
+      ],
+      [
+        "注重实用",
+        "focus on the practical"
+      ],
+      [
+        "技术创新",
+        "innovate technologically"
+      ],
+      [
+        "实验验证",
+        "verify through experiments"
+      ],
+      [
+        "逻辑推理",
+        "reason logically"
+      ],
+      [
+        "精确测量",
+        "measure precisely"
+      ],
+      [
+        "系统设计",
+        "design systematically"
+      ],
+      [
+        "标准生产",
+        "standardize production"
+      ],
+      [
+        "质量控制",
+        "control quality"
+      ],
+      [
+        "开放共享",
+        "share openly"
+      ],
+      [
+        "协同创新",
+        "innovate collaboratively"
+      ],
+      [
+        "科技向善",
+        "use tech for good"
+      ],
+      [
+        "工程思维",
+        "think like an engineer"
+      ],
+      [
+        "效率优先",
+        "prioritize efficiency"
+      ],
+      [
+        "实用导向",
+        "be practice-oriented"
+      ],
+      [
+        "因果分析",
+        "analyze causally"
+      ],
+      [
+        "方法论思考",
+        "think methodologically"
+      ],
+      [
+        "墨家辩学",
+        "study Mohist logic"
+      ],
+      [
+        "几何测量",
+        "apply geometry"
+      ],
+      [
+        "光学实验",
+        "conduct optics experiments"
+      ],
+      [
+        "力学应用",
+        "apply mechanics"
+      ],
+      [
+        "城防工程",
+        "build fortifications"
+      ],
+      [
+        "机关制造",
+        "build mechanisms"
+      ],
+      [
+        "工艺改进",
+        "improve craftsmanship"
+      ],
+      [
+        "技术标准化",
+        "standardize technology"
+      ],
+      [
+        "知识论探究",
+        "explore epistemology"
+      ],
+      [
+        "反宿命论",
+        "oppose fatalism"
+      ],
+      [
+        "崇尚科学",
+        "revere science"
+      ],
+      [
+        "尊重事实",
+        "respect facts"
+      ],
+      [
+        "实验精神",
+        "experimental spirit"
+      ],
+      [
+        "创新驱动",
+        "innovation-driven"
+      ]
+    ],
+    "sources": [
+      "墨子",
+      "《墨经》",
+      "《墨子》",
+      "墨家学派",
+      "中国古代科技",
+      "工程史",
+      "逻辑史",
+      "科技哲学"
+    ]
+  },
+  "经济金融": {
+    "dim_zh": "经济金融",
+    "dim_en": "economics and finance",
+    "concepts": [
+      [
+        "市场",
+        "market"
+      ],
+      [
+        "资本",
+        "capital"
+      ],
+      [
+        "投资",
+        "investment"
+      ],
+      [
+        "风险",
+        "risk"
+      ],
+      [
+        "回报",
+        "return"
+      ],
+      [
+        "价值",
+        "value"
+      ],
+      [
+        "价格",
+        "price"
+      ],
+      [
+        "供需",
+        "supply and demand"
+      ],
+      [
+        "增长",
+        "growth"
+      ],
+      [
+        "通胀",
+        "inflation"
+      ],
+      [
+        "利率",
+        "interest rate"
+      ],
+      [
+        "汇率",
+        "exchange rate"
+      ],
+      [
+        "股票",
+        "stock"
+      ],
+      [
+        "债券",
+        "bond"
+      ],
+      [
+        "基金",
+        "fund"
+      ],
+      [
+        "衍生品",
+        "derivative"
+      ],
+      [
+        "资产",
+        "asset"
+      ],
+      [
+        "负债",
+        "liability"
+      ],
+      [
+        "现金流",
+        "cash flow"
+      ],
+      [
+        "利润",
+        "profit"
+      ],
+      [
+        "成本",
+        "cost"
+      ],
+      [
+        "收益",
+        "revenue"
+      ],
+      [
+        "效率",
+        "efficiency"
+      ],
+      [
+        "生产力",
+        "productivity"
+      ],
+      [
+        "贸易",
+        "trade"
+      ],
+      [
+        "全球化",
+        "globalization"
+      ],
+      [
+        "分工",
+        "division of labor"
+      ],
+      [
+        "比较优势",
+        "comparative advantage"
+      ],
+      [
+        "货币",
+        "currency"
+      ],
+      [
+        "信用",
+        "credit"
+      ],
+      [
+        "杠杆",
+        "leverage"
+      ],
+      [
+        "流动性",
+        "liquidity"
+      ],
+      [
+        "泡沫",
+        "bubble"
+      ],
+      [
+        "衰退",
+        "recession"
+      ],
+      [
+        "繁荣",
+        "boom"
+      ],
+      [
+        "周期",
+        "cycle"
+      ],
+      [
+        "创新",
+        "innovation"
+      ],
+      [
+        "创业",
+        "entrepreneurship"
+      ],
+      [
+        "规模",
+        "scale"
+      ],
+      [
+        "网络效应",
+        "network effect"
+      ],
+      [
+        "复利",
+        "compound interest"
+      ],
+      [
+        "多元化",
+        "diversification"
+      ],
+      [
+        "对冲",
+        "hedging"
+      ]
+    ],
+    "actions": [
+      [
+        "投资未来",
+        "invest in the future"
+      ],
+      [
+        "管理风险",
+        "manage risk"
+      ],
+      [
+        "创造价值",
+        "create value"
+      ],
+      [
+        "优化配置",
+        "optimize allocation"
+      ],
+      [
+        "长期持有",
+        "hold long-term"
+      ],
+      [
+        "分散投资",
+        "diversify investments"
+      ],
+      [
+        "控制成本",
+        "control costs"
+      ],
+      [
+        "提高效率",
+        "improve efficiency"
+      ],
+      [
+        "抓住机遇",
+        "seize opportunities"
+      ],
+      [
+        "规避陷阱",
+        "avoid traps"
+      ],
+      [
+        "理解市场",
+        "understand markets"
+      ],
+      [
+        "分析数据",
+        "analyze data"
+      ],
+      [
+        "保持理性",
+        "stay rational"
+      ],
+      [
+        "克服贪婪",
+        "overcome greed"
+      ],
+      [
+        "克服恐惧",
+        "overcome fear"
+      ],
+      [
+        "逆向思考",
+        "think contrarian"
+      ],
+      [
+        "价值投资",
+        "invest in value"
+      ],
+      [
+        "趋势跟踪",
+        "follow trends"
+      ],
+      [
+        "资产配置",
+        "allocate assets"
+      ],
+      [
+        "定期定额",
+        "dollar-cost average"
+      ],
+      [
+        "复利增长",
+        "grow through compounding"
+      ],
+      [
+        "保护本金",
+        "protect principal"
+      ],
+      [
+        "寻找护城河",
+        "find moats"
+      ],
+      [
+        "评估企业",
+        "evaluate companies"
+      ],
+      [
+        "理解商业模式",
+        "understand business models"
+      ],
+      [
+        "关注现金流",
+        "watch cash flow"
+      ],
+      [
+        "避免杠杆",
+        "avoid leverage"
+      ],
+      [
+        "保持流动性",
+        "maintain liquidity"
+      ],
+      [
+        "周期思考",
+        "think cyclically"
+      ],
+      [
+        "逆向投资",
+        "invest contrarian"
+      ],
+      [
+        "创业创新",
+        "start up and innovate"
+      ],
+      [
+        "规模化",
+        "scale up"
+      ],
+      [
+        "网络效应",
+        "build network effects"
+      ],
+      [
+        "平台经济",
+        "build platforms"
+      ]
+    ],
+    "sources": [
+      "亚当·斯密",
+      "凯恩斯",
+      "哈耶克",
+      "沃伦·巴菲特",
+      "查理·芒格",
+      "瑞·达利欧",
+      "经济学",
+      "金融学",
+      "投资学",
+      "行为金融学"
+    ]
+  },
+  "艺术美学": {
+    "dim_zh": "艺术美学",
+    "dim_en": "art and aesthetics",
+    "concepts": [
+      [
+        "美",
+        "beauty"
+      ],
+      [
+        "艺术",
+        "art"
+      ],
+      [
+        "审美",
+        "aesthetics"
+      ],
+      [
+        "创造",
+        "creation"
+      ],
+      [
+        "表达",
+        "expression"
+      ],
+      [
+        "形式",
+        "form"
+      ],
+      [
+        "色彩",
+        "color"
+      ],
+      [
+        "线条",
+        "line"
+      ],
+      [
+        "构图",
+        "composition"
+      ],
+      [
+        "节奏",
+        "rhythm"
+      ],
+      [
+        "旋律",
+        "melody"
+      ],
+      [
+        "和声",
+        "harmony"
+      ],
+      [
+        "韵律",
+        "meter"
+      ],
+      [
+        "意境",
+        "artistic conception"
+      ],
+      [
+        "气韵",
+        "spirit resonance"
+      ],
+      [
+        "风格",
+        "style"
+      ],
+      [
+        "流派",
+        "school"
+      ],
+      [
+        "经典",
+        "classic"
+      ],
+      [
+        "先锋",
+        "avant-garde"
+      ],
+      [
+        "绘画",
+        "painting"
+      ],
+      [
+        "音乐",
+        "music"
+      ],
+      [
+        "雕塑",
+        "sculpture"
+      ],
+      [
+        "建筑",
+        "architecture"
+      ],
+      [
+        "文学",
+        "literature"
+      ],
+      [
+        "诗歌",
+        "poetry"
+      ],
+      [
+        "舞蹈",
+        "dance"
+      ],
+      [
+        "电影",
+        "film"
+      ],
+      [
+        "摄影",
+        "photography"
+      ],
+      [
+        "设计",
+        "design"
+      ],
+      [
+        "书法",
+        "calligraphy"
+      ],
+      [
+        "戏曲",
+        "opera"
+      ],
+      [
+        "美与丑",
+        "beauty and ugliness"
+      ],
+      [
+        "崇高",
+        "the sublime"
+      ],
+      [
+        "悲剧",
+        "tragedy"
+      ],
+      [
+        "喜剧",
+        "comedy"
+      ],
+      [
+        "象征",
+        "symbolism"
+      ],
+      [
+        "抽象",
+        "abstraction"
+      ],
+      [
+        "写实",
+        "realism"
+      ],
+      [
+        "印象",
+        "impressionism"
+      ],
+      [
+        "灵感",
+        "inspiration"
+      ],
+      [
+        "想象力",
+        "imagination"
+      ],
+      [
+        "创造力",
+        "creativity"
+      ]
+    ],
+    "actions": [
+      [
+        "感受美",
+        "experience beauty"
+      ],
+      [
+        "创造艺术",
+        "create art"
+      ],
+      [
+        "培养审美",
+        "cultivate aesthetics"
+      ],
+      [
+        "表达情感",
+        "express emotions"
+      ],
+      [
+        "探索形式",
+        "explore form"
+      ],
+      [
+        "运用色彩",
+        "use color"
+      ],
+      [
+        "构建构图",
+        "compose"
+      ],
+      [
+        "创造节奏",
+        "create rhythm"
+      ],
+      [
+        "追求意境",
+        "pseek artistic conception"
+      ],
+      [
+        "传达气韵",
+        "convey spirit"
+      ],
+      [
+        "发展风格",
+        "develop style"
+      ],
+      [
+        "学习经典",
+        "study classics"
+      ],
+      [
+        "拥抱先锋",
+        "embrace the avant-garde"
+      ],
+      [
+        "跨界融合",
+        "blend across boundaries"
+      ],
+      [
+        "绘画创作",
+        "paint"
+      ],
+      [
+        "音乐创作",
+        "compose music"
+      ],
+      [
+        "写作诗歌",
+        "write poetry"
+      ],
+      [
+        "设计产品",
+        "design products"
+      ],
+      [
+        "拍摄照片",
+        "take photographs"
+      ],
+      [
+        "编排舞蹈",
+        "choreograph"
+      ],
+      [
+        "制作电影",
+        "make films"
+      ],
+      [
+        "书法练习",
+        "practice calligraphy"
+      ],
+      [
+        "欣赏艺术",
+        "appreciate art"
+      ],
+      [
+        "参观展览",
+        "visit exhibitions"
+      ],
+      [
+        "阅读文学",
+        "read literature"
+      ],
+      [
+        "聆听音乐",
+        "listen to music"
+      ],
+      [
+        "观看表演",
+        "watch performances"
+      ],
+      [
+        "讨论美学",
+        "discuss aesthetics"
+      ],
+      [
+        "寻找灵感",
+        "find inspiration"
+      ],
+      [
+        "发挥想象",
+        "exercise imagination"
+      ],
+      [
+        "释放创造",
+        "unleash creativity"
+      ],
+      [
+        "打破常规",
+        "break conventions"
+      ],
+      [
+        "追求完美",
+        "pursue perfection"
+      ],
+      [
+        "表达个性",
+        "express individuality"
+      ]
+    ],
+    "sources": [
+      "美学",
+      "艺术史",
+      "宗白华",
+      "朱光潜",
+      "苏珊·朗格",
+      "贡布里希",
+      "艺术哲学",
+      "文艺理论",
+      "音乐学",
+      "视觉艺术"
+    ]
+  },
+  "健康养生": {
+    "dim_zh": "健康养生",
+    "dim_en": "health and wellness",
+    "concepts": [
+      [
+        "健康",
+        "health"
+      ],
+      [
+        "养生",
+        "wellness"
+      ],
+      [
+        "饮食",
+        "diet"
+      ],
+      [
+        "运动",
+        "exercise"
+      ],
+      [
+        "睡眠",
+        "sleep"
+      ],
+      [
+        "心理",
+        "mental"
+      ],
+      [
+        "情绪",
+        "emotion"
+      ],
+      [
+        "压力",
+        "stress"
+      ],
+      [
+        "免疫",
+        "immunity"
+      ],
+      [
+        "代谢",
+        "metabolism"
+      ],
+      [
+        "营养",
+        "nutrition"
+      ],
+      [
+        "水分",
+        "hydration"
+      ],
+      [
+        "呼吸",
+        "breathing"
+      ],
+      [
+        " posture ",
+        "posture"
+      ],
+      [
+        "体能",
+        "fitness"
+      ],
+      [
+        "柔韧",
+        "flexibility"
+      ],
+      [
+        "力量",
+        "strength"
+      ],
+      [
+        "耐力",
+        "endurance"
+      ],
+      [
+        "协调",
+        "coordination"
+      ],
+      [
+        "平衡",
+        "balance"
+      ],
+      [
+        "预防",
+        "prevention"
+      ],
+      [
+        "康复",
+        "recovery"
+      ],
+      [
+        "疗愈",
+        "healing"
+      ],
+      [
+        "活力",
+        "vitality"
+      ],
+      [
+        "长寿",
+        "longevity"
+      ],
+      [
+        "抗衰",
+        "anti-aging"
+      ],
+      [
+        "冥想",
+        "meditation"
+      ],
+      [
+        "正念",
+        "mindfulness"
+      ],
+      [
+        "中医",
+        "TCM"
+      ],
+      [
+        "经络",
+        "meridians"
+      ],
+      [
+        "气血",
+        "qi and blood"
+      ],
+      [
+        "阴阳",
+        "yin and yang"
+      ],
+      [
+        "食疗",
+        "food therapy"
+      ],
+      [
+        "药膳",
+        "herbal cuisine"
+      ],
+      [
+        "太极",
+        "tai chi"
+      ],
+      [
+        "八段锦",
+        "baduanjin"
+      ],
+      [
+        "作息",
+        "daily routine"
+      ],
+      [
+        "节律",
+        "biorhythm"
+      ],
+      [
+        "自然疗法",
+        "natural therapy"
+      ],
+      [
+        "身心合一",
+        "body-mind unity"
+      ],
+      [
+        "整体健康",
+        "holistic health"
+      ]
+    ],
+    "actions": [
+      [
+        "均衡饮食",
+        "eat a balanced diet"
+      ],
+      [
+        "规律运动",
+        "exercise regularly"
+      ],
+      [
+        "充足睡眠",
+        "get enough sleep"
+      ],
+      [
+        "管理压力",
+        "manage stress"
+      ],
+      [
+        "冥想正念",
+        "practice mindfulness"
+      ],
+      [
+        "深呼吸",
+        "breathe deeply"
+      ],
+      [
+        "保持水分",
+        "stay hydrated"
+      ],
+      [
+        "控制体重",
+        "control weight"
+      ],
+      [
+        "定期体检",
+        "get regular checkups"
+      ],
+      [
+        "预防疾病",
+        "prevent disease"
+      ],
+      [
+        "增强免疫",
+        "boost immunity"
+      ],
+      [
+        "改善代谢",
+        "improve metabolism"
+      ],
+      [
+        "练习太极",
+        "practice tai chi"
+      ],
+      [
+        "做八段锦",
+        "do baduanjin"
+      ],
+      [
+        "药膳调理",
+        "use herbal cuisine"
+      ],
+      [
+        "食疗养生",
+        "practice food therapy"
+      ],
+      [
+        "经络按摩",
+        "massage meridians"
+      ],
+      [
+        "调节气血",
+        "regulate qi and blood"
+      ],
+      [
+        "平衡阴阳",
+        "balance yin and yang"
+      ],
+      [
+        "顺应四时",
+        "follow the seasons"
+      ],
+      [
+        "早睡早起",
+        "sleep early, rise early"
+      ],
+      [
+        "午间小憩",
+        "take a midday nap"
+      ],
+      [
+        "晒太阳",
+        "get sunlight"
+      ],
+      [
+        "亲近自然",
+        "connect with nature"
+      ],
+      [
+        "户外活动",
+        "outdoor activities"
+      ],
+      [
+        "力量训练",
+        "strength training"
+      ],
+      [
+        "有氧运动",
+        "aerobic exercise"
+      ],
+      [
+        "拉伸柔韧",
+        "stretch for flexibility"
+      ],
+      [
+        "心理调节",
+        "regulate mentally"
+      ],
+      [
+        "情绪管理",
+        "manage emotions"
+      ],
+      [
+        "社交健康",
+        "social health"
+      ],
+      [
+        "心灵成长",
+        "spiritual growth"
+      ]
+    ],
+    "sources": [
+      "《黄帝内经》",
+      "中医学",
+      "现代医学",
+      "营养学",
+      "运动科学",
+      "心理学",
+      "冥想研究",
+      "养生学",
+      "预防医学",
+      "整体健康"
+    ]
+  },
+  "未来科技": {
+    "dim_zh": "未来科技",
+    "dim_en": "future technology",
+    "concepts": [
+      [
+        "人工智能",
+        "AI"
+      ],
+      [
+        "机器学习",
+        "machine learning"
+      ],
+      [
+        "深度学习",
+        "deep learning"
+      ],
+      [
+        "量子计算",
+        "quantum computing"
+      ],
+      [
+        "区块链",
+        "blockchain"
+      ],
+      [
+        "Web3",
+        "Web3"
+      ],
+      [
+        "元宇宙",
+        "metaverse"
+      ],
+      [
+        "物联网",
+        "IoT"
+      ],
+      [
+        "5G/6G",
+        "5G/6G"
+      ],
+      [
+        "云计算",
+        "cloud computing"
+      ],
+      [
+        "大数据",
+        "big data"
+      ],
+      [
+        "边缘计算",
+        "edge computing"
+      ],
+      [
+        "数字孪生",
+        "digital twin"
+      ],
+      [
+        "增强现实",
+        "AR"
+      ],
+      [
+        "虚拟现实",
+        "VR"
+      ],
+      [
+        "混合现实",
+        "MR"
+      ],
+      [
+        "脑机接口",
+        "brain-computer interface"
+      ],
+      [
+        "基因编辑",
+        "gene editing"
+      ],
+      [
+        "合成生物学",
+        "synthetic biology"
+      ],
+      [
+        "纳米技术",
+        "nanotechnology"
+      ],
+      [
+        "核聚变",
+        "nuclear fusion"
+      ],
+      [
+        "太空探索",
+        "space exploration"
+      ],
+      [
+        "自动驾驶",
+        "autonomous driving"
+      ],
+      [
+        "机器人",
+        "robotics"
+      ],
+      [
+        "3D打印",
+        "3D printing"
+      ],
+      [
+        "生物打印",
+        "bioprinting"
+      ],
+      [
+        "通用人工智能",
+        "AGI"
+      ],
+      [
+        "超级智能",
+        "superintelligence"
+      ],
+      [
+        "技术奇点",
+        "technological singularity"
+      ],
+      [
+        "数字身份",
+        "digital identity"
+      ],
+      [
+        "去中心化",
+        "decentralization"
+      ],
+      [
+        "智能合约",
+        "smart contracts"
+      ],
+      [
+        "DAO",
+        "DAO"
+      ],
+      [
+        "NFT",
+        "NFT"
+      ],
+      [
+        "代币经济",
+        "tokenomics"
+      ],
+      [
+        "AI伦理",
+        "AI ethics"
+      ],
+      [
+        "数据隐私",
+        "data privacy"
+      ],
+      [
+        "网络安全",
+        "cybersecurity"
+      ],
+      [
+        "开源",
+        "open source"
+      ],
+      [
+        "开放科学",
+        "open science"
+      ],
+      [
+        "数字素养",
+        "digital literacy"
+      ]
+    ],
+    "actions": [
+      [
+        "拥抱AI",
+        "embrace AI"
+      ],
+      [
+        "学习编程",
+        "learn programming"
+      ],
+      [
+        "理解数据",
+        "understand data"
+      ],
+      [
+        "保护隐私",
+        "protect privacy"
+      ],
+      [
+        "构建区块链",
+        "build blockchain"
+      ],
+      [
+        "探索元宇宙",
+        "explore the metaverse"
+      ],
+      [
+        "研发量子技术",
+        "develop quantum tech"
+      ],
+      [
+        "推进太空探索",
+        "advance space exploration"
+      ],
+      [
+        "投资未来",
+        "invest in the future"
+      ],
+      [
+        "关注AI伦理",
+        "focus on AI ethics"
+      ],
+      [
+        "数字转型",
+        "transform digitally"
+      ],
+      [
+        "开源协作",
+        "collaborate openly"
+      ],
+      [
+        "创新驱动",
+        "drive innovation"
+      ],
+      [
+        "跨学科融合",
+        "integrate across disciplines"
+      ],
+      [
+        "人机协作",
+        "collaborate with AI"
+      ],
+      [
+        "数据驱动决策",
+        "make data-driven decisions"
+      ],
+      [
+        "智能自动化",
+        "automate intelligently"
+      ],
+      [
+        "安全设计",
+        "design for security"
+      ],
+      [
+        "可解释AI",
+        "build explainable AI"
+      ],
+      [
+        "负责任创新",
+        "innovate responsibly"
+      ],
+      [
+        "技术普惠",
+        "make tech accessible"
+      ],
+      [
+        "缩小数字鸿沟",
+        "bridge the digital divide"
+      ],
+      [
+        "培养数字素养",
+        "cultivate digital literacy"
+      ],
+      [
+        "参与开源",
+        "participate in open source"
+      ],
+      [
+        "关注技术伦理",
+        "mind tech ethics"
+      ],
+      [
+        "防范算法偏见",
+        "prevent algorithmic bias"
+      ],
+      [
+        "保护数据权利",
+        "protect data rights"
+      ],
+      [
+        "构建信任",
+        "build trust"
+      ],
+      [
+        "去中心化治理",
+        "decentralize governance"
+      ],
+      [
+        "探索新范式",
+        "explore new paradigms"
+      ]
+    ],
+    "sources": [
+      "雷·库兹韦尔",
+      "尼克·博斯特罗姆",
+      "吴恩达",
+      "艾伦·图灵",
+      "冯·诺依曼",
+      "AI研究",
+      "量子物理",
+      "生物技术",
+      "太空科技",
+      "技术哲学"
+    ]
+  },
+  "世界文明": {
+    "dim_zh": "世界文明",
+    "dim_en": "world civilization",
+    "concepts": [
+      [
+        "文明",
+        "civilization"
+      ],
+      [
+        "文化",
+        "culture"
+      ],
+      [
+        "交流",
+        "exchange"
+      ],
+      [
+        "互鉴",
+        "mutual learning"
+      ],
+      [
+        "多元",
+        "diversity"
+      ],
+      [
+        "共生",
+        "coexistence"
+      ],
+      [
+        "传统",
+        "tradition"
+      ],
+      [
+        "现代",
+        "modernity"
+      ],
+      [
+        "东方",
+        "the East"
+      ],
+      [
+        "西方",
+        "the West"
+      ],
+      [
+        "南方",
+        "the Global South"
+      ],
+      [
+        "北方",
+        "the Global North"
+      ],
+      [
+        "宗教",
+        "religion"
+      ],
+      [
+        "哲学",
+        "philosophy"
+      ],
+      [
+        "文学",
+        "literature"
+      ],
+      [
+        "艺术",
+        "art"
+      ],
+      [
+        "建筑",
+        "architecture"
+      ],
+      [
+        "音乐",
+        "music"
+      ],
+      [
+        "语言",
+        "language"
+      ],
+      [
+        "文字",
+        "writing"
+      ],
+      [
+        "丝绸之路",
+        "Silk Road"
+      ],
+      [
+        "大航海",
+        "Age of Discovery"
+      ],
+      [
+        "文艺复兴",
+        "Renaissance"
+      ],
+      [
+        "启蒙运动",
+        "Enlightenment"
+      ],
+      [
+        "工业革命",
+        "Industrial Revolution"
+      ],
+      [
+        "信息革命",
+        "Information Revolution"
+      ],
+      [
+        "全球化",
+        "globalization"
+      ],
+      [
+        "多元文化",
+        "multiculturalism"
+      ],
+      [
+        "文化遗产",
+        "cultural heritage"
+      ],
+      [
+        "世界遗产",
+        "world heritage"
+      ],
+      [
+        "非物质文化遗产",
+        "intangible heritage"
+      ],
+      [
+        "文明对话",
+        "dialogue of civilizations"
+      ],
+      [
+        "文明冲突",
+        "clash of civilizations"
+      ],
+      [
+        "轴心时代",
+        "Axial Age"
+      ],
+      [
+        "大历史",
+        "Big History"
+      ],
+      [
+        "全球史",
+        "global history"
+      ],
+      [
+        "比较文明",
+        "comparative civilization"
+      ],
+      [
+        "跨文化",
+        "cross-cultural"
+      ],
+      [
+        "翻译",
+        "translation"
+      ],
+      [
+        "传播",
+        "transmission"
+      ],
+      [
+        "融合",
+        "fusion"
+      ],
+      [
+        "创新",
+        "innovation"
+      ]
+    ],
+    "actions": [
+      [
+        "促进文明对话",
+        "promote civilizational dialogue"
+      ],
+      [
+        "尊重文化差异",
+        "respect cultural differences"
+      ],
+      [
+        "保护文化遗产",
+        "protect cultural heritage"
+      ],
+      [
+        "推动文化交流",
+        "promote cultural exchange"
+      ],
+      [
+        "学习世界历史",
+        "learn world history"
+      ],
+      [
+        "理解不同文明",
+        "understand different civilizations"
+      ],
+      [
+        "跨越文化鸿沟",
+        "bridge cultural gaps"
+      ],
+      [
+        "拥抱多元文化",
+        "embrace multiculturalism"
+      ],
+      [
+        "传承传统",
+        "carry on traditions"
+      ],
+      [
+        "面向现代",
+        "face modernity"
+      ],
+      [
+        "东西方对话",
+        "dialogue between East and West"
+      ],
+      [
+        "南北合作",
+        "South-North cooperation"
+      ],
+      [
+        "比较文明研究",
+        "study civilizations comparatively"
+      ],
+      [
+        "跨文化交流",
+        "communicate cross-culturally"
+      ],
+      [
+        "翻译经典",
+        "translate classics"
+      ],
+      [
+        "传播文化",
+        "spread culture"
+      ],
+      [
+        "保护语言",
+        "protect languages"
+      ],
+      [
+        "记录历史",
+        "record history"
+      ],
+      [
+        "参观世界遗产",
+        "visit world heritage"
+      ],
+      [
+        "体验不同文化",
+        "experience different cultures"
+      ],
+      [
+        "学习外语",
+        "learn foreign languages"
+      ],
+      [
+        "阅读世界文学",
+        "read world literature"
+      ],
+      [
+        "欣赏世界音乐",
+        "appreciate world music"
+      ],
+      [
+        "研究世界宗教",
+        "study world religions"
+      ],
+      [
+        "比较哲学",
+        "do comparative philosophy"
+      ],
+      [
+        "理解全球史",
+        "understand global history"
+      ],
+      [
+        "参与文明对话",
+        "engage in civilizational dialogue"
+      ],
+      [
+        "反对文明冲突",
+        "oppose civilizational conflict"
+      ],
+      [
+        "倡导文明互鉴",
+        "advocate mutual learning"
+      ],
+      [
+        "构建人类命运共同体",
+        "build a shared future"
+      ]
+    ],
+    "sources": [
+      "汤因比",
+      "亨廷顿",
+      "费孝通",
+      "布罗代尔",
+      "麦克尼尔",
+      "大历史",
+      "全球史",
+      "文明研究",
+      "联合国教科文组织",
+      "跨文化研究"
+    ]
+  },
+  "商业智慧": {
+    "dim_zh": "商业智慧",
+    "dim_en": "business wisdom",
+    "concepts": [
+      [
+        "战略",
+        "strategy"
+      ],
+      [
+        "执行",
+        "execution"
+      ],
+      [
+        "创新",
+        "innovation"
+      ],
+      [
+        "效率",
+        "efficiency"
+      ],
+      [
+        "客户",
+        "customer"
+      ],
+      [
+        "价值",
+        "value"
+      ],
+      [
+        "品牌",
+        "brand"
+      ],
+      [
+        "市场",
+        "market"
+      ],
+      [
+        "竞争",
+        "competition"
+      ],
+      [
+        "合作",
+        "cooperation"
+      ],
+      [
+        "增长",
+        "growth"
+      ],
+      [
+        "规模",
+        "scale"
+      ],
+      [
+        "利润",
+        "profit"
+      ],
+      [
+        "成本",
+        "cost"
+      ],
+      [
+        "现金流",
+        "cash flow"
+      ],
+      [
+        "资产",
+        "asset"
+      ],
+      [
+        "投资",
+        "investment"
+      ],
+      [
+        "回报",
+        "return"
+      ],
+      [
+        "风险",
+        "risk"
+      ],
+      [
+        "机会",
+        "opportunity"
+      ],
+      [
+        "创业",
+        "entrepreneurship"
+      ],
+      [
+        "管理",
+        "management"
+      ],
+      [
+        "领导力",
+        "leadership"
+      ],
+      [
+        "文化",
+        "culture"
+      ],
+      [
+        "团队",
+        "team"
+      ],
+      [
+        "人才",
+        "talent"
+      ],
+      [
+        "组织",
+        "organization"
+      ],
+      [
+        "产品",
+        "product"
+      ],
+      [
+        "服务",
+        "service"
+      ],
+      [
+        "渠道",
+        "channel"
+      ],
+      [
+        "定价",
+        "pricing"
+      ],
+      [
+        "营销",
+        "marketing"
+      ],
+      [
+        "销售",
+        "sales"
+      ],
+      [
+        "运营",
+        "operations"
+      ],
+      [
+        "供应链",
+        "supply chain"
+      ],
+      [
+        "数据",
+        "data"
+      ],
+      [
+        "技术",
+        "technology"
+      ],
+      [
+        "平台",
+        "platform"
+      ],
+      [
+        "生态",
+        "ecosystem"
+      ]
+    ],
+    "actions": [
+      [
+        "制定战略",
+        "formulate strategy"
+      ],
+      [
+        "高效执行",
+        "execute efficiently"
+      ],
+      [
+        "持续创新",
+        "innovate continuously"
+      ],
+      [
+        "创造价值",
+        "create value"
+      ],
+      [
+        "服务客户",
+        "serve customers"
+      ],
+      [
+        "建设品牌",
+        "build brands"
+      ],
+      [
+        "分析市场",
+        "analyze markets"
+      ],
+      [
+        "管理竞争",
+        "manage competition"
+      ],
+      [
+        "寻求合作",
+        "seek cooperation"
+      ],
+      [
+        "驱动增长",
+        "drive growth"
+      ],
+      [
+        "控制成本",
+        "control costs"
+      ],
+      [
+        "优化利润",
+        "optimize profits"
+      ],
+      [
+        "管理现金流",
+        "manage cash flow"
+      ],
+      [
+        "投资未来",
+        "invest in the future"
+      ],
+      [
+        "评估风险",
+        "assess risks"
+      ],
+      [
+        "抓住机会",
+        "seize opportunities"
+      ],
+      [
+        "创业创新",
+        "start up and innovate"
+      ],
+      [
+        "培养人才",
+        "develop talent"
+      ],
+      [
+        "建设文化",
+        "build culture"
+      ],
+      [
+        "领导团队",
+        "lead teams"
+      ],
+      [
+        "设计产品",
+        "design products"
+      ],
+      [
+        "优化服务",
+        "optimize services"
+      ],
+      [
+        "拓展渠道",
+        "expand channels"
+      ],
+      [
+        "合理定价",
+        "price rationally"
+      ],
+      [
+        "精准营销",
+        "market precisely"
+      ],
+      [
+        "提升销售",
+        "improve sales"
+      ],
+      [
+        "精益运营",
+        "operate leanly"
+      ],
+      [
+        "管理供应链",
+        "manage supply chains"
+      ],
+      [
+        "数据驱动",
+        "be data-driven"
+      ],
+      [
+        "技术赋能",
+        "leverage technology"
+      ],
+      [
+        "构建平台",
+        "build platforms"
+      ],
+      [
+        "培育生态",
+        "nurture ecosystems"
+      ],
+      [
+        "长期主义",
+        "think long-term"
+      ],
+      [
+        "客户至上",
+        "put customers first"
+      ]
+    ],
+    "sources": [
+      "彼得·德鲁克",
+      "迈克尔·波特",
+      "克莱顿·克里斯坦森",
+      "乔布斯",
+      "贝佐斯",
+      "彼得·蒂尔",
+      "沃伦·巴菲特",
+      "查理·芒格",
+      "哈佛商学院",
+      "战略管理"
+    ]
+  },
+  "教育学习": {
+    "dim_zh": "教育学习",
+    "dim_en": "education and learning",
+    "concepts": [
+      [
+        "教育",
+        "education"
+      ],
+      [
+        "学习",
+        "learning"
+      ],
+      [
+        "知识",
+        "knowledge"
+      ],
+      [
+        "智慧",
+        "wisdom"
+      ],
+      [
+        "思考",
+        "thinking"
+      ],
+      [
+        "实践",
+        "practice"
+      ],
+      [
+        "创造",
+        "creation"
+      ],
+      [
+        "探索",
+        "exploration"
+      ],
+      [
+        "阅读",
+        "reading"
+      ],
+      [
+        "写作",
+        "writing"
+      ],
+      [
+        "讨论",
+        "discussion"
+      ],
+      [
+        "研究",
+        "research"
+      ],
+      [
+        "记忆",
+        "memory"
+      ],
+      [
+        "理解",
+        "understanding"
+      ],
+      [
+        "应用",
+        "application"
+      ],
+      [
+        "分析",
+        "analysis"
+      ],
+      [
+        "评价",
+        "evaluation"
+      ],
+      [
+        "创造",
+        "creation"
+      ],
+      [
+        "方法",
+        "method"
+      ],
+      [
+        "策略",
+        "strategy"
+      ],
+      [
+        "动机",
+        "motivation"
+      ],
+      [
+        "兴趣",
+        "interest"
+      ],
+      [
+        "好奇心",
+        "curiosity"
+      ],
+      [
+        "毅力",
+        "perseverance"
+      ],
+      [
+        "天赋",
+        "talent"
+      ],
+      [
+        "努力",
+        "effort"
+      ],
+      [
+        "成长",
+        "growth"
+      ],
+      [
+        "进步",
+        "progress"
+      ],
+      [
+        "教师",
+        "teacher"
+      ],
+      [
+        "学生",
+        "student"
+      ],
+      [
+        "学校",
+        "school"
+      ],
+      [
+        "社会",
+        "society"
+      ],
+      [
+        "课程",
+        "curriculum"
+      ],
+      [
+        "评估",
+        "assessment"
+      ],
+      [
+        "反馈",
+        "feedback"
+      ],
+      [
+        "反思",
+        "reflection"
+      ],
+      [
+        "终身学习",
+        "lifelong learning"
+      ],
+      [
+        "自主学习",
+        "self-directed learning"
+      ],
+      [
+        "协作学习",
+        "collaborative learning"
+      ],
+      [
+        "个性化学习",
+        "personalized learning"
+      ]
+    ],
+    "actions": [
+      [
+        "终身学习",
+        "learn lifelong"
+      ],
+      [
+        "主动学习",
+        "learn proactively"
+      ],
+      [
+        "深度阅读",
+        "read deeply"
+      ],
+      [
+        "有效写作",
+        "write effectively"
+      ],
+      [
+        "积极讨论",
+        "discuss actively"
+      ],
+      [
+        "严谨研究",
+        "research rigorously"
+      ],
+      [
+        "科学记忆",
+        "memorize scientifically"
+      ],
+      [
+        "深化理解",
+        "deepen understanding"
+      ],
+      [
+        "灵活应用",
+        "apply flexibly"
+      ],
+      [
+        "批判分析",
+        "analyze critically"
+      ],
+      [
+        "独立评价",
+        "evaluate independently"
+      ],
+      [
+        "勇于创造",
+        "create boldly"
+      ],
+      [
+        "探索未知",
+        "explore the unknown"
+      ],
+      [
+        "培养好奇心",
+        "cultivate curiosity"
+      ],
+      [
+        "保持兴趣",
+        "maintain interest"
+      ],
+      [
+        "坚持不懈",
+        "persevere"
+      ],
+      [
+        "发挥天赋",
+        "leverage talent"
+      ],
+      [
+        "付出努力",
+        "put in effort"
+      ],
+      [
+        "持续成长",
+        "grow continuously"
+      ],
+      [
+        "追求进步",
+        "pursue progress"
+      ],
+      [
+        "尊师重道",
+        "respect teachers"
+      ],
+      [
+        "因材施教",
+        "teach according to aptitude"
+      ],
+      [
+        "教学相长",
+        "teach and learn together"
+      ],
+      [
+        "学以致用",
+        "learn to apply"
+      ],
+      [
+        "知行合一",
+        "unify knowledge and action"
+      ],
+      [
+        "温故知新",
+        "review and learn anew"
+      ],
+      [
+        "举一反三",
+        "infer broadly"
+      ],
+      [
+        "融会贯通",
+        "integrate comprehensively"
+      ],
+      [
+        "个性化学习",
+        "personalize learning"
+      ],
+      [
+        "协作探究",
+        "collaborate and inquire"
+      ],
+      [
+        "反思改进",
+        "reflect and improve"
+      ],
+      [
+        "设定目标",
+        "set learning goals"
+      ],
+      [
+        "管理时间",
+        "manage learning time"
+      ],
+      [
+        "利用工具",
+        "use learning tools"
+      ]
+    ],
+    "sources": [
+      "孔子",
+      "苏格拉底",
+      "杜威",
+      "皮亚杰",
+      "维果茨基",
+      "布鲁姆",
+      "蒙台梭利",
+      "卡罗尔·德韦克",
+      "安德斯·埃里克森",
+      "教育心理学"
+    ]
+  },
+  "生命哲学": {
+    "dim_zh": "生命哲学",
+    "dim_en": "the philosophy of life",
+    "concepts": [
+      [
+        "生命",
+        "life"
+      ],
+      [
+        "死亡",
+        "death"
+      ],
+      [
+        "存在",
+        "existence"
+      ],
+      [
+        "意义",
+        "meaning"
+      ],
+      [
+        "自由",
+        "freedom"
+      ],
+      [
+        "选择",
+        "choice"
+      ],
+      [
+        "责任",
+        "responsibility"
+      ],
+      [
+        "命运",
+        "destiny"
+      ],
+      [
+        "时间",
+        "time"
+      ],
+      [
+        "永恒",
+        "eternity"
+      ],
+      [
+        "瞬间",
+        "the moment"
+      ],
+      [
+        "流逝",
+        "passage"
+      ],
+      [
+        "苦难",
+        "suffering"
+      ],
+      [
+        "幸福",
+        "happiness"
+      ],
+      [
+        "痛苦",
+        "pain"
+      ],
+      [
+        "快乐",
+        "joy"
+      ],
+      [
+        "孤独",
+        "loneliness"
+      ],
+      [
+        "连接",
+        "connection"
+      ],
+      [
+        "爱",
+        "love"
+      ],
+      [
+        "恨",
+        "hate"
+      ],
+      [
+        "希望",
+        "hope"
+      ],
+      [
+        "绝望",
+        "despair"
+      ],
+      [
+        "勇气",
+        "courage"
+      ],
+      [
+        "恐惧",
+        "fear"
+      ],
+      [
+        "智慧",
+        "wisdom"
+      ],
+      [
+        "无知",
+        "ignorance"
+      ],
+      [
+        "真理",
+        "truth"
+      ],
+      [
+        "谬误",
+        "error"
+      ],
+      [
+        "身体",
+        "body"
+      ],
+      [
+        "心灵",
+        "mind"
+      ],
+      [
+        "灵魂",
+        "soul"
+      ],
+      [
+        "意识",
+        "consciousness"
+      ],
+      [
+        "自我",
+        "self"
+      ],
+      [
+        "他者",
+        "the other"
+      ],
+      [
+        "世界",
+        "world"
+      ],
+      [
+        "宇宙",
+        "universe"
+      ],
+      [
+        "有限",
+        "finitude"
+      ],
+      [
+        "无限",
+        "infinity"
+      ],
+      [
+        "必然",
+        "necessity"
+      ],
+      [
+        "偶然",
+        "contingency"
+      ]
+    ],
+    "actions": [
+      [
+        "审视生命",
+        "examine life"
+      ],
+      [
+        "面对死亡",
+        "confront death"
+      ],
+      [
+        "寻找意义",
+        "search for meaning"
+      ],
+      [
+        "自由选择",
+        "choose freely"
+      ],
+      [
+        "承担责任",
+        "bear responsibility"
+      ],
+      [
+        "接受命运",
+        "accept destiny"
+      ],
+      [
+        "珍惜时间",
+        "cherish time"
+      ],
+      [
+        "活在当下",
+        "live in the present"
+      ],
+      [
+        "面对苦难",
+        "face suffering"
+      ],
+      [
+        "追求幸福",
+        "pursue happiness"
+      ],
+      [
+        "克服痛苦",
+        "overcome pain"
+      ],
+      [
+        "享受快乐",
+        "enjoy joy"
+      ],
+      [
+        "超越孤独",
+        "transcend loneliness"
+      ],
+      [
+        "建立连接",
+        "build connections"
+      ],
+      [
+        "给予和接受爱",
+        "give and receive love"
+      ],
+      [
+        "保持希望",
+        "maintain hope"
+      ],
+      [
+        "克服绝望",
+        "overcome despair"
+      ],
+      [
+        "鼓起勇气",
+        "muster courage"
+      ],
+      [
+        "面对恐惧",
+        "face fear"
+      ],
+      [
+        "追求智慧",
+        "pursue wisdom"
+      ],
+      [
+        "承认无知",
+        "acknowledge ignorance"
+      ],
+      [
+        "探寻真理",
+        "seek truth"
+      ],
+      [
+        "避免谬误",
+        "avoid error"
+      ],
+      [
+        "身心合一",
+        "unify body and mind"
+      ],
+      [
+        "滋养灵魂",
+        "nourish the soul"
+      ],
+      [
+        "探索意识",
+        "explore consciousness"
+      ],
+      [
+        "认识自我",
+        "know the self"
+      ],
+      [
+        "理解他者",
+        "understand the other"
+      ],
+      [
+        "拥抱世界",
+        "embrace the world"
+      ],
+      [
+        "仰望宇宙",
+        "look up to the universe"
+      ],
+      [
+        "接受有限",
+        "accept finitude"
+      ],
+      [
+        "想象无限",
+        "imagine infinity"
+      ],
+      [
+        "理解必然",
+        "understand necessity"
+      ],
+      [
+        "拥抱偶然",
+        "embrace contingency"
+      ]
+    ],
+    "sources": [
+      "苏格拉底",
+      "柏拉图",
+      "亚里士多德",
+      "老子",
+      "庄子",
+      "孔子",
+      "尼采",
+      "萨特",
+      "加缪",
+      "海德格尔",
+      "弗兰克尔",
+      "存在主义",
+      "东方哲学"
+    ]
+  },
+  "和平正义": {
+    "dim_zh": "和平正义",
+    "dim_en": "peace and justice",
+    "concepts": [
+      [
+        "和平",
+        "peace"
+      ],
+      [
+        "正义",
+        "justice"
+      ],
+      [
+        "公平",
+        "fairness"
+      ],
+      [
+        "平等",
+        "equality"
+      ],
+      [
+        "自由",
+        "freedom"
+      ],
+      [
+        "权利",
+        "rights"
+      ],
+      [
+        "尊严",
+        "dignity"
+      ],
+      [
+        "法治",
+        "rule of law"
+      ],
+      [
+        "宽容",
+        "tolerance"
+      ],
+      [
+        "宽恕",
+        "forgiveness"
+      ],
+      [
+        "和解",
+        "reconciliation"
+      ],
+      [
+        "真相",
+        "truth"
+      ],
+      [
+        "问责",
+        "accountability"
+      ],
+      [
+        "赔偿",
+        "reparation"
+      ],
+      [
+        "改革",
+        "reform"
+      ],
+      [
+        "修复",
+        "repair"
+      ],
+      [
+        "非暴力",
+        "nonviolence"
+      ],
+      [
+        "对话",
+        "dialogue"
+      ],
+      [
+        "协商",
+        "negotiation"
+      ],
+      [
+        "调解",
+        "mediation"
+      ],
+      [
+        "人权",
+        "human rights"
+      ],
+      [
+        "国际法",
+        "international law"
+      ],
+      [
+        "人道主义",
+        "humanitarianism"
+      ],
+      [
+        "战争罪",
+        "war crimes"
+      ],
+      [
+        "反人类罪",
+        "crimes against humanity"
+      ],
+      [
+        "种族灭绝",
+        "genocide"
+      ],
+      [
+        "难民",
+        "refugees"
+      ],
+      [
+        "流离失所",
+        "displacement"
+      ],
+      [
+        "保护责任",
+        "responsibility to protect"
+      ],
+      [
+        "和平建设",
+        "peacebuilding"
+      ],
+      [
+        "过渡正义",
+        "transitional justice"
+      ],
+      [
+        "积极和平",
+        "positive peace"
+      ],
+      [
+        "消极和平",
+        "negative peace"
+      ],
+      [
+        "结构性暴力",
+        "structural violence"
+      ],
+      [
+        "文化暴力",
+        "cultural violence"
+      ],
+      [
+        "裁军",
+        "disarmament"
+      ],
+      [
+        "核不扩散",
+        "non-proliferation"
+      ]
+    ],
+    "actions": [
+      [
+        "维护和平",
+        "maintain peace"
+      ],
+      [
+        "追求正义",
+        "pursue justice"
+      ],
+      [
+        "促进公平",
+        "promote fairness"
+      ],
+      [
+        "保障平等",
+        "ensure equality"
+      ],
+      [
+        "捍卫自由",
+        "defend freedom"
+      ],
+      [
+        "保护权利",
+        "protect rights"
+      ],
+      [
+        "维护尊严",
+        "uphold dignity"
+      ],
+      [
+        "遵守法治",
+        "uphold the rule of law"
+      ],
+      [
+        "实践宽容",
+        "practice tolerance"
+      ],
+      [
+        "给予宽恕",
+        "offer forgiveness"
+      ],
+      [
+        "推动和解",
+        "promote reconciliation"
+      ],
+      [
+        "揭示真相",
+        "reveal truth"
+      ],
+      [
+        "追究责任",
+        "hold accountable"
+      ],
+      [
+        "提供赔偿",
+        "provide reparations"
+      ],
+      [
+        "推动改革",
+        "advance reform"
+      ],
+      [
+        "修复关系",
+        "repair relationships"
+      ],
+      [
+        "坚持非暴力",
+        "maintain nonviolence"
+      ],
+      [
+        "开展对话",
+        "engage in dialogue"
+      ],
+      [
+        "协商解决",
+        "negotiate solutions"
+      ],
+      [
+        "调解冲突",
+        "mediate conflicts"
+      ],
+      [
+        "保护人权",
+        "protect human rights"
+      ],
+      [
+        "遵守国际法",
+        "comply with international law"
+      ],
+      [
+        "人道援助",
+        "provide humanitarian aid"
+      ],
+      [
+        "反对战争罪",
+        "oppose war crimes"
+      ],
+      [
+        "防止种族灭绝",
+        "prevent genocide"
+      ],
+      [
+        "保护难民",
+        "protect refugees"
+      ],
+      [
+        "帮助流离失所者",
+        "help the displaced"
+      ],
+      [
+        "履行保护责任",
+        "fulfill the responsibility to protect"
+      ],
+      [
+        "建设和平",
+        "build peace"
+      ],
+      [
+        "推动过渡正义",
+        "promote transitional justice"
+      ],
+      [
+        "消除结构性暴力",
+        "eliminate structural violence"
+      ],
+      [
+        "反对文化暴力",
+        "oppose cultural violence"
+      ],
+      [
+        "推动裁军",
+        "promote disarmament"
+      ],
+      [
+        "防止核扩散",
+        "prevent nuclear proliferation"
+      ]
+    ],
+    "sources": [
+      "甘地",
+      "曼德拉",
+      "马丁·路德·金",
+      "图图大主教",
+      "加尔通",
+      "康德",
+      "罗尔斯",
+      "联合国",
+      "国际法",
+      "和平学"
+    ]
+  },
+  "冒险探索": {
+    "dim_zh": "冒险探索",
+    "dim_en": "adventure and exploration",
+    "concepts": [
+      [
+        "冒险",
+        "adventure"
+      ],
+      [
+        "探索",
+        "exploration"
+      ],
+      [
+        "勇气",
+        "courage"
+      ],
+      [
+        "未知",
+        "the unknown"
+      ],
+      [
+        "挑战",
+        "challenge"
+      ],
+      [
+        "极限",
+        "limit"
+      ],
+      [
+        "突破",
+        "breakthrough"
+      ],
+      [
+        "发现",
+        "discovery"
+      ],
+      [
+        "远方",
+        "faraway"
+      ],
+      [
+        "旅途",
+        "journey"
+      ],
+      [
+        "航行",
+        "voyage"
+      ],
+      [
+        "远征",
+        "expedition"
+      ],
+      [
+        "攀登",
+        "climbing"
+      ],
+      [
+        "潜水",
+        "diving"
+      ],
+      [
+        "飞行",
+        "flying"
+      ],
+      [
+        "穿越",
+        "traversing"
+      ],
+      [
+        "荒野",
+        "wilderness"
+      ],
+      [
+        "深海",
+        "deep sea"
+      ],
+      [
+        "高山",
+        "high mountain"
+      ],
+      [
+        "极地",
+        "polar region"
+      ],
+      [
+        "太空",
+        "space"
+      ],
+      [
+        "地下",
+        "underground"
+      ],
+      [
+        "丛林",
+        "jungle"
+      ],
+      [
+        "沙漠",
+        "desert"
+      ],
+      [
+        "孤独",
+        "solitude"
+      ],
+      [
+        "坚韧",
+        "resilience"
+      ],
+      [
+        "适应",
+        "adaptation"
+      ],
+      [
+        "生存",
+        "survival"
+      ],
+      [
+        "地图",
+        "map"
+      ],
+      [
+        "指南针",
+        "compass"
+      ],
+      [
+        "星座",
+        "constellation"
+      ],
+      [
+        "地标",
+        "landmark"
+      ],
+      [
+        "风险",
+        "risk"
+      ],
+      [
+        "回报",
+        "reward"
+      ],
+      [
+        "失败",
+        "failure"
+      ],
+      [
+        "成功",
+        "success"
+      ],
+      [
+        "故事",
+        "story"
+      ],
+      [
+        "传说",
+        "legend"
+      ],
+      [
+        "英雄",
+        "hero"
+      ],
+      [
+        "传奇",
+        "epic"
+      ]
+    ],
+    "actions": [
+      [
+        "踏上旅途",
+        "embark on a journey"
+      ],
+      [
+        "探索未知",
+        "explore the unknown"
+      ],
+      [
+        "面对挑战",
+        "face challenges"
+      ],
+      [
+        "突破极限",
+        "push limits"
+      ],
+      [
+        "拥抱冒险",
+        "embrace adventure"
+      ],
+      [
+        "征服高山",
+        "conquer mountains"
+      ],
+      [
+        "潜入深海",
+        "dive into the deep"
+      ],
+      [
+        "飞向天空",
+        "fly to the sky"
+      ],
+      [
+        "穿越荒野",
+        "traverse wilderness"
+      ],
+      [
+        "远征极地",
+        "expedition to the poles"
+      ],
+      [
+        "航行大海",
+        "sail the seas"
+      ],
+      [
+        "探索太空",
+        "explore space"
+      ],
+      [
+        "深入地下",
+        "go underground"
+      ],
+      [
+        "穿越丛林",
+        "cross jungles"
+      ],
+      [
+        "横渡沙漠",
+        "cross deserts"
+      ],
+      [
+        "忍受孤独",
+        "endure solitude"
+      ],
+      [
+        "保持坚韧",
+        "stay resilient"
+      ],
+      [
+        "适应环境",
+        "adapt to environments"
+      ],
+      [
+        "学会生存",
+        "learn to survive"
+      ],
+      [
+        "绘制地图",
+        "draw maps"
+      ],
+      [
+        "辨识方向",
+        "find directions"
+      ],
+      [
+        "观察星座",
+        "observe constellations"
+      ],
+      [
+        "寻找地标",
+        "find landmarks"
+      ],
+      [
+        "评估风险",
+        "assess risks"
+      ],
+      [
+        "追求回报",
+        "seek rewards"
+      ],
+      [
+        "接受失败",
+        "accept failure"
+      ],
+      [
+        "庆祝成功",
+        "celebrate success"
+      ],
+      [
+        "讲述故事",
+        "tell stories"
+      ],
+      [
+        "创造传说",
+        "create legends"
+      ],
+      [
+        "成为英雄",
+        "be a hero"
+      ],
+      [
+        "书写传奇",
+        "write epics"
+      ],
+      [
+        "走出舒适区",
+        "leave the comfort zone"
+      ]
+    ],
+    "sources": [
+      "马可·波罗",
+      "哥伦布",
+      "麦哲伦",
+      "达尔文",
+      "阿蒙森",
+      "希拉里",
+      "阿姆斯特朗",
+      "加加林",
+      "乔治·马洛里",
+      "探险史"
+    ]
+  }
+},
+  templates: [["{concept_zh}是{dim_zh}的核心。", "{concept_en} is the core of {dim_en}."], ["理解{concept_zh}是{dim_zh}的第一步。", "Understanding {concept_en} is the first step in {dim_en}."], ["{action_zh}是{dim_zh}的关键。", "{action_en} is key to {dim_en}."], ["在{dim_zh}中，{concept_zh}不可或缺。", "In {dim_en}, {concept_en} is indispensable."], ["{concept_zh}与{concept2_zh}相辅相成。", "{concept_en} and {concept2_en} complement each other."], ["真正的{dim_zh}需要{concept_zh}。", "True {dim_en} requires {concept_en}."], ["{concept_zh}是{dim_zh}的基石。", "{concept_en} is the cornerstone of {dim_en}."], ["{action_zh}，方能{concept_zh}。", "{action_en}, and only then can one {concept_en}."], ["{dim_zh}的本质在于{concept_zh}。", "The essence of {dim_en} lies in {concept_en}."], ["{concept_zh}决定{dim_zh}的高度。", "{concept_en} determines the height of {dim_en}."], ["没有{concept_zh}，就没有真正的{dim_zh}。", "Without {concept_en}, there is no true {dim_en}."], ["{concept_zh}是通向{dim_zh}的桥梁。", "{concept_en} is the bridge to {dim_en}."], ["{action_zh}是{dim_zh}的实践。", "{action_en} is the practice of {dim_en}."], ["{dim_zh}的智慧在于{concept_zh}。", "The wisdom of {dim_en} lies in {concept_en}."], ["{concept_zh}是{dim_zh}的灵魂。", "{concept_en} is the soul of {dim_en}."], ["在{dim_zh}中，{action_zh}比{concept_zh}更重要。", "In {dim_en}, {action_en} matters more than {concept_en}."], ["{dim_zh}的最高境界是{concept_zh}。", "The highest realm of {dim_en} is {concept_en}."], ["{concept_zh}和{concept2_zh}是{dim_zh}的双翼。", "{concept_en} and {concept2_en} are the twin wings of {dim_en}."], ["{action_zh}，就是践行{concept_zh}。", "{action_en} is to practice {concept_en}."], ["{dim_zh}始于{concept_zh}。", "{dim_en} begins with {concept_en}."], ["{concept_zh}是{dim_zh}的灯塔。", "{concept_en} is the beacon of {dim_en}."], ["{dim_zh}需要{action_zh}的勇气。", "{dim_en} requires the courage to {action_en}."], ["{concept_zh}不是{dim_zh}的全部，但是{dim_zh}的起点。", "{concept_en} is not all of {dim_en}, but its starting point."], ["{action_zh}，让{concept_zh}成为习惯。", "{action_en}, and make {concept_en} a habit."], ["{dim_zh}的根基是{concept_zh}。", "The foundation of {dim_en} is {concept_en}."], ["{concept_zh}指引{dim_zh}的方向。", "{concept_en} guides the direction of {dim_en}."], ["{action_zh}是{dim_zh}最深刻的表达。", "{action_en} is the most profound expression of {dim_en}."], ["{dim_zh}的终极目标是{concept_zh}。", "The ultimate goal of {dim_en} is {concept_en}."], ["{concept_zh}与{concept2_zh}的统一是{dim_zh}的精髓。", "The unity of {concept_en} and {concept2_en} is the essence of {dim_en}."], ["{action_zh}，是{dim_zh}中最朴素的力量。", "{action_en} is the simplest force in {dim_en}."], ["{concept_zh}是{dim_zh}永恒的主题。", "{concept_en} is an eternal theme of {dim_en}."], ["{dim_zh}需要{action_zh}，也需要{concept_zh}。", "{dim_en} needs {action_en}, and also {concept_en}."], ["{concept_zh}是{dim_zh}的底色。", "{concept_en} is the underlying tone of {dim_en}."], ["{action_zh}是{dim_zh}的生命力所在。", "{action_en} is where the vitality of {dim_en} lies."], ["{concept_zh}照亮{dim_zh}的道路。", "{concept_en} illuminates the path of {dim_en}."], ["在{dim_zh}的实践中，{concept_zh}是试金石。", "In the practice of {dim_en}, {concept_en} is the touchstone."], ["{dim_zh}因{concept_zh}而深刻。", "{dim_en} is profound because of {concept_en}."], ["{action_zh}，就是{dim_zh}的最好诠释。", "{action_en} is the best interpretation of {dim_en}."], ["{concept_zh}是{dim_zh}的内功。", "{concept_en} is the inner cultivation of {dim_en}."], ["{dim_zh}的外在表现是{action_zh}。", "The outward expression of {dim_en} is {action_en}."], ["{concept_zh}是{dim_zh}的种子。", "{concept_en} is the seed of {dim_en}."], ["{action_zh}是{dim_zh}的收获。", "{action_en} is the harvest of {dim_en}."], ["{dim_zh}的价值在于{concept_zh}。", "The value of {dim_en} lies in {concept_en}."], ["{concept_zh}是{dim_zh}的镜子。", "{concept_en} is the mirror of {dim_en}."], ["{dim_zh}通过{action_zh}来实现。", "{dim_en} is realized through {action_en}."], ["{concept_zh}是{dim_zh}的语言。", "{concept_en} is the language of {dim_en}."], ["{dim_zh}的深度取决于{concept_zh}。", "The depth of {dim_en} depends on {concept_en}."], ["{action_zh}是{dim_zh}的态度。", "{action_en} is the attitude of {dim_en}."], ["{concept_zh}是{dim_zh}的诗意。", "{concept_en} is the poetry of {dim_en}."], ["{dim_zh}因{action_zh}而生动。", "{dim_en} comes alive through {action_en}."], ["{concept_zh}是{dim_zh}的脉搏。", "{concept_en} is the pulse of {dim_en}."], ["{dim_zh}的秘密藏在{concept_zh}中。", "The secret of {dim_en} hides in {concept_en}."], ["{action_zh}，就是{dim_zh}的修行。", "{action_en} is the practice of {dim_en}."], ["{concept_zh}是{dim_zh}的温度。", "{concept_en} is the warmth of {dim_en}."], ["{dim_zh}的出路在于{concept_zh}。", "The way forward for {dim_en} lies in {concept_en}."], ["{concept_zh}是{dim_zh}的原动力。", "{concept_en} is the driving force of {dim_en}."], ["{dim_zh}的品格由{concept_zh}塑造。", "The character of {dim_en} is shaped by {concept_en}."], ["{action_zh}是{dim_zh}的仪式。", "{action_en} is the ritual of {dim_en}."], ["{concept_zh}是{dim_zh}的火焰。", "{concept_en} is the flame of {dim_en}."], ["{dim_zh}在{concept_zh}中找到答案。", "{dim_en} finds its answer in {concept_en}."], ["{concept_zh}是{dim_zh}的罗盘。", "{concept_en} is the compass of {dim_en}."], ["{action_zh}，让{dim_zh}更有力量。", "{action_en} gives {dim_en} more strength."], ["{concept_zh}是{dim_zh}的呼吸。", "{concept_en} is the breath of {dim_en}."], ["{dim_zh}的纹理由{concept_zh}编织。", "The texture of {dim_en} is woven by {concept_en}."], ["{concept_zh}是{dim_zh}的根脉。", "{concept_en} is the root system of {dim_en}."], ["{action_zh}是{dim_zh}的旋律。", "{action_en} is the melody of {dim_en}."], ["{dim_zh}在{concept_zh}中觉醒。", "{dim_en} awakens in {concept_en}."], ["{concept_zh}是{dim_zh}的钥匙。", "{concept_en} is the key to {dim_en}."], ["{dim_zh}的精髓在于{action_zh}。", "The essence of {dim_en} lies in {action_en}."], ["{concept_zh}与{concept2_zh}交织成{dim_zh}的图景。", "{concept_en} and {concept2_en} weave the tapestry of {dim_en}."], ["{dim_zh}的力量源于{concept_zh}。", "The power of {dim_en} stems from {concept_en}."], ["{action_zh}，让{concept_zh}在{dim_zh}中扎根。", "{action_en} roots {concept_en} in {dim_en}."], ["{concept_zh}是{dim_zh}的星光。", "{concept_en} is the starlight of {dim_en}."], ["{dim_zh}的品质取决于{action_zh}。", "The quality of {dim_en} depends on {action_en}."], ["{concept_zh}是{dim_zh}的底座。", "{concept_en} is the base of {dim_en}."], ["{dim_zh}的韵律由{concept_zh}谱写。", "The rhythm of {dim_en} is composed by {concept_en}."], ["{action_zh}是{dim_zh}的呼吸节奏。", "{action_en} is the breathing rhythm of {dim_en}."], ["{concept_zh}是{dim_zh}的源头活水。", "{concept_en} is the living spring of {dim_en}."], ["{dim_zh}因{concept_zh}而辽阔。", "{dim_en} becomes vast because of {concept_en}."], ["{concept_zh}和{action_zh}是{dim_zh}的两面。", "{concept_en} and {action_en} are two sides of {dim_en}."], ["{concept_zh}是{dim_zh}的根基，无根之木不可长存。", "{concept_en} is the root of {dim_en}; a tree without roots cannot endure."], ["{concept_zh}是{dim_zh}的翅膀，带我们飞越山川。", "{concept_en} is the wing of {dim_en}, carrying us across mountains."], ["{concept_zh}是{dim_zh}的种子，今日播种明日收获。", "{concept_en} is the seed of {dim_en}; sow today, reap tomorrow."], ["{concept_zh}是{dim_zh}的灯塔，指引前行方向。", "{concept_en} is the lighthouse of {dim_en}, guiding the way forward."], ["{concept_zh}是{dim_zh}的钥匙，开启智慧之门。", "{concept_en} is the key to {dim_en}, unlocking the door of wisdom."], ["{concept_zh}是{dim_zh}的桥梁，连接此岸与彼岸。", "{concept_en} is the bridge of {dim_en}, connecting here and there."], ["{concept_zh}是{dim_zh}的火焰，照亮黑暗角落。", "{concept_en} is the flame of {dim_en}, illuminating dark corners."], ["{concept_zh}是{dim_zh}的甘泉，滋润干涸心田。", "{concept_en} is the sweet spring of {dim_en}, nourishing the parched heart."], ["{concept_zh}是{dim_zh}的盾牌，守护核心价值。", "{concept_en} is the shield of {dim_en}, protecting core values."], ["{concept_zh}是{dim_zh}的引擎，驱动持续进步。", "{concept_en} is the engine of {dim_en}, driving continuous progress."], ["在{dim_zh}中，{concept_zh}与{concept2_zh}如鸟之双翼。", "In {dim_en}, {concept_en} and {concept2_en} are like two wings of a bird."], ["{dim_zh}的精髓在于：以{concept_zh}为本，以{concept2_zh}为用。", "The essence of {dim_en}: rooted in {concept_en}, applied through {concept2_en}."], ["没有{concept_zh}的{dim_zh}如同无舵之舟。", "{dim_en} without {concept_en} is like a rudderless boat."], ["{concept_zh}不是{dim_zh}的全部，但是{dim_zh}的起点。", "{concept_en} is not all of {dim_en}, but its starting point."], ["真正的{dim_zh}，始于{concept_zh}，终于{concept2_zh}。", "True {dim_en} begins with {concept_en} and ends in {concept2_en}."], ["{concept_zh}是{dim_zh}的经线，{concept2_zh}是纬线，交织成文明锦缎。", "{concept_en} is the warp of {dim_en}, {concept2_en} the weft, weaving civilization's tapestry."], ["{dim_zh}需要{concept_zh}，也需要{concept2_zh}，二者缺一不可。", "{dim_en} needs {concept_en}, and also {concept2_en}; neither can be omitted."], ["{concept_zh}为体，{concept2_zh}为用，这是{dim_zh}的智慧。", "{concept_en} as substance, {concept2_en} as function — this is the wisdom of {dim_en}."], ["{dim_zh}的最高境界是{concept_zh}与{concept2_zh}的统一。", "The highest realm of {dim_en} is the unity of {concept_en} and {concept2_en}."], ["{concept_zh}为{dim_zh}立骨，{concept2_zh}为{dim_zh}注魂。", "{concept_en} gives bones to {dim_en}; {concept2_en} gives it soul."], ["{action_zh}，方能领悟{concept_zh}的真谛。", "Only by {action_en} can one grasp the essence of {concept_en}."], ["{action_zh}者，必先修{concept_zh}。", "Those who {action_en} must first cultivate {concept_en}."], ["{action_zh}的关键在于理解{concept_zh}。", "The key to {action_en} lies in understanding {concept_en}."], ["不{action_zh}，不知{concept_zh}之可贵。", "Without {action_en}, one cannot appreciate the value of {concept_en}."], ["{action_zh}的过程就是践行{concept_zh}的过程。", "The process of {action_en} is the process of practicing {concept_en}."], ["以{concept_zh}为指引去{action_zh}，方能行稳致远。", "Guided by {concept_en} to {action_en}, one can go far and steady."], ["{action_zh}需要{concept_zh}的支撑，否则空中楼阁。", "{action_en} needs the support of {concept_en}, otherwise it's castles in the air."], ["{concept_zh}不是空洞的口号，而要落实到{action_zh}中。", "{concept_en} is not an empty slogan but must be realized through {action_en}."], ["{action_zh}的最高境界是体现{concept_zh}。", "The highest level of {action_en} is to embody {concept_en}."], ["知{concept_zh}而后{action_zh}，事半功倍。", "Understand {concept_en} then {action_en}, and achieve twice the result with half the effort."], ["{dim_zh}告诉我们：{action_zh}是通往{concept_zh}的必经之路。", "{dim_en} tells us: {action_en} is the path to {concept_en}."], ["{action_zh}始于{concept_zh}，终于{concept2_zh}。", "{action_en} begins with {concept_en} and ends in {concept2_en}."], ["没有{concept_zh}的{action_zh}是盲目的。", "{action_en} without {concept_en} is blind."], ["没有{action_zh}的{concept_zh}是空洞的。", "{concept_en} without {action_en} is empty."], ["{action_zh}时不忘{concept_zh}，方得始终。", "Never forget {concept_en} when {action_en}, and you will see it through."], ["{concept_zh}指导我们{action_zh}，{action_zh}验证{concept_zh}。", "{concept_en} guides us to {action_en}; {action_en} validates {concept_en}."], ["{dim_zh}的实践是：在{action_zh}中体悟{concept_zh}。", "The practice of {dim_en}: experience {concept_en} through {action_en}."], ["{action_zh}是对{concept_zh}最好的诠释。", "{action_en} is the best interpretation of {concept_en}."], ["真正的{action_zh}，必然体现{concept_zh}。", "True {action_en} inevitably reflects {concept_en}."], ["{concept_zh}让人在{action_zh}中不迷失方向。", "{concept_en} keeps one from losing direction during {action_en}."], ["{concept_zh}是{dim_zh}的明面，{concept2_zh}是暗面，二者相辅相成。", "{concept_en} is the light side of {dim_en}, {concept2_en} the dark; they complement each other."], ["{dim_zh}中，{concept_zh}为表，{concept2_zh}为里。", "In {dim_en}, {concept_en} is the surface, {concept2_en} the core."], ["有{concept_zh}而无{concept2_zh}，{dim_zh}便不完整。", "{dim_en} is incomplete with {concept_en} but without {concept2_en}."], ["{concept_zh}与{concept2_zh}的平衡，是{dim_zh}的艺术。", "The balance of {concept_en} and {concept2_en} is the art of {dim_en}."], ["{dim_zh}不是在{concept_zh}与{concept2_zh}之间二选一，而是融合二者。", "{dim_en} is not choosing between {concept_en} and {concept2_en}, but fusing both."], ["{concept_zh}是{dim_zh}的根基，{concept2_zh}是其枝叶。", "{concept_en} is the root of {dim_en}; {concept2_en} its branches."], ["{concept_zh}是{dim_zh}的起点，{concept2_zh}是终点。", "{concept_en} is the start of {dim_en}; {concept2_en} the destination."], ["{concept_zh}是{dim_zh}的手段，{concept2_zh}是目的。", "{concept_en} is the means of {dim_en}; {concept2_en} the end."], ["{concept_zh}是{dim_zh}的形式，{concept2_zh}是内容。", "{concept_en} is the form of {dim_en}; {concept2_en} the content."], ["{concept_zh}是{dim_zh}的现象，{concept2_zh}是本质。", "{concept_en} is the phenomenon of {dim_en}; {concept2_en} the essence."], ["舍{concept_zh}而求{concept2_zh}，是舍本逐末。", "To abandon {concept_en} for {concept2_en} is to chase the trivial and lose the fundamental."], ["{concept_zh}与{concept2_zh}，如阴阳交融，构成完整的{dim_zh}。", "{concept_en} and {concept2_en}, like yin and yang, form the complete {dim_en}."], ["{dim_zh}的真谛：寓{concept_zh}于{concept2_zh}之中。", "The essence of {dim_en}: embed {concept_en} within {concept2_en}."], ["{concept_zh}为{dim_zh}之体，{concept2_zh}为{dim_zh}之相。", "{concept_en} is the substance of {dim_en}; {concept2_en} its manifestation."], ["{dim_zh}在{concept_zh}与{concept2_zh}之间寻找平衡点。", "{dim_en} finds its balance between {concept_en} and {concept2_en}."], ["{concept_zh}是{dim_zh}的静，{concept2_zh}是动。", "{concept_en} is the stillness of {dim_en}; {concept2_en} the motion."], ["{concept_zh}是{dim_zh}的因，{concept2_zh}是果。", "{concept_en} is the cause in {dim_en}; {concept2_en} the effect."], ["{concept_zh}是{dim_zh}的质，{concept2_zh}是量。", "{concept_en} is the quality of {dim_en}; {concept2_en} the quantity."], ["{concept_zh}是{dim_zh}的深度，{concept2_zh}是广度。", "{concept_en} is the depth of {dim_en}; {concept2_en} the breadth."], ["{concept_zh}是{dim_zh}的内核，{concept2_zh}是外壳。", "{concept_en} is the inner core of {dim_en}; {concept2_en} the outer shell."], ["什么是{dim_zh}的核心？答案在{concept_zh}中。", "What is the core of {dim_en}? The answer lies in {concept_en}."], ["{dim_zh}问我们：你是否真正理解了{concept_zh}？", "{dim_en} asks us: do you truly understand {concept_en}?"], ["如果没有{concept_zh}，{dim_zh}还剩下什么？", "Without {concept_en}, what remains of {dim_en}?"], ["{dim_zh}的终极问题：如何平衡{concept_zh}与{concept2_zh}？", "The ultimate question of {dim_en}: how to balance {concept_en} and {concept2_en}?"], ["我们为何需要{concept_zh}？因为{dim_zh}离不开它。", "Why do we need {concept_en}? Because {dim_en} cannot do without it."], ["{dim_zh}的答案不在远方，就在{concept_zh}之中。", "The answer of {dim_en} is not far away — it's right in {concept_en}."], ["你真的懂{concept_zh}吗？{dim_zh}要求我们不断追问。", "Do you really understand {concept_en}? {dim_en} demands we keep asking."], ["{concept_zh}不是答案，而是通往{dim_zh}的钥匙。", "{concept_en} is not the answer, but the key to {dim_en}."], ["{dim_zh}最大的悖论：{concept_zh}越深，越觉不足。", "The greatest paradox of {dim_en}: the deeper the {concept_en}, the more one feels lacking."], ["{concept_zh}之于{dim_zh}，如同水之于鱼。", "{concept_en} to {dim_en} is like water to fish."], ["当我们谈论{dim_zh}时，我们在谈论{concept_zh}。", "When we speak of {dim_en}, we speak of {concept_en}."], ["{dim_zh}的本质是什么？是{concept_zh}的实践。", "What is the essence of {dim_en}? It is the practice of {concept_en}."], ["{concept_zh}为何重要？因为它是{dim_zh}的基石。", "Why does {concept_en} matter? Because it is the cornerstone of {dim_en}."], ["{dim_zh}教会我们：{concept_zh}不是终点，而是旅程。", "{dim_en} teaches us: {concept_en} is not a destination but a journey."], ["如果{dim_zh}是一座山，{concept_zh}就是登顶的路。", "If {dim_en} is a mountain, {concept_en} is the path to the summit."], ["{concept_zh}之于{dim_zh}，如同根之于树。", "{concept_en} to {dim_en} is like roots to a tree."], ["{dim_zh}的意义在于：通过{concept_zh}认识自己。", "The meaning of {dim_en}: to know oneself through {concept_en}."], ["{concept_zh}不是{dim_zh}的装饰，而是骨架。", "{concept_en} is not decoration for {dim_en}, but its skeleton."], ["{dim_zh}追问：没有{concept_zh}，文明何以延续？", "{dim_en} asks: without {concept_en}, how can civilization endure?"], ["{concept_zh}是{dim_zh}留给我们的最大遗产。", "{concept_en} is the greatest legacy {dim_en} leaves us."], ["从古至今，{concept_zh}始终是{dim_zh}的核心命题。", "From ancient times to now, {concept_en} has always been the core proposition of {dim_en}."], ["{dim_zh}在{concept_zh}的演进中不断丰富。", "{dim_en} is enriched through the evolution of {concept_en}."], ["时代在变，但{dim_zh}中的{concept_zh}永不过时。", "Times change, but {concept_en} in {dim_en} never goes out of style."], ["{concept_zh}是{dim_zh}穿越时空的力量。", "{concept_en} is the power of {dim_en} that transcends time and space."], ["千年{dim_zh}，一言以蔽之：{concept_zh}。", "A thousand years of {dim_en}, in a word: {concept_en}."], ["{concept_zh}是{dim_zh}不灭的火种。", "{concept_en} is the unextinguishable spark of {dim_en}."], ["{dim_zh}的历史就是{concept_zh}的传承史。", "The history of {dim_en} is the history of {concept_en}'s transmission."], ["每个时代都需要重新诠释{dim_zh}中的{concept_zh}。", "Every era needs to reinterpret {concept_en} in {dim_en}."], ["{concept_zh}让{dim_zh}在过去、现在和未来保持生命力。", "{concept_en} keeps {dim_en} alive in past, present, and future."], ["{dim_zh}不是博物馆的展品，{concept_zh}让它活在当下。", "{dim_en} is not a museum exhibit; {concept_en} keeps it alive today."], ["从{concept_zh}到{concept2_zh}，是{dim_zh}的历史跨越。", "From {concept_en} to {concept2_en} is a historic leap in {dim_en}."], ["{concept_zh}属于过去，也属于未来，这就是{dim_zh}的生命力。", "{concept_en} belongs to the past and the future — this is the vitality of {dim_en}."], ["{dim_zh}的每一次复兴，都源于对{concept_zh}的回归。", "Every renaissance of {dim_en} stems from a return to {concept_en}."], ["{concept_zh}是{dim_zh}中唯一不被时间侵蚀的东西。", "{concept_en} is the only thing in {dim_en} not eroded by time."], ["未来{dim_zh}的基石，依然是{concept_zh}。", "The foundation of future {dim_en} remains {concept_en}."], ["{dim_zh}告诉我们：{concept_zh}是跨越文明的共识。", "{dim_en} tells us: {concept_en} is a consensus across civilizations."], ["无论科技如何发展，{concept_zh}始终是{dim_zh}的锚点。", "No matter how technology advances, {concept_en} remains the anchor of {dim_en}."], ["{concept_zh}是{dim_zh}在时间长河中的坐标。", "{concept_en} is the coordinate of {dim_en} in the river of time."], ["{dim_zh}的未来不在于抛弃{concept_zh}，而在于重新发现它。", "The future of {dim_en} lies not in abandoning {concept_en}, but in rediscovering it."], ["{concept_zh}是{dim_zh}留给未来的最好的礼物。", "{concept_en} is the best gift {dim_en} leaves for the future."], ["{dim_zh}的智慧不在于知道{concept_zh}，而在于践行它。", "The wisdom of {dim_en} is not in knowing {concept_en}, but in practicing it."], ["知{concept_zh}易，行{concept_zh}难，这是{dim_zh}的忠告。", "To know {concept_en} is easy; to practice it is hard — this is the counsel of {dim_en}."], ["{dim_zh}不是纸上谈兵，{concept_zh}要在生活中验证。", "{dim_en} is not armchair strategy; {concept_en} must be tested in life."], ["真正的{dim_zh}，是把{concept_zh}化为日常习惯。", "True {dim_en} is turning {concept_en} into daily habit."], ["{concept_zh}的力量在于实践，不在空谈——这是{dim_zh}的铁律。", "The power of {concept_en} lies in practice, not talk — this is the iron law of {dim_en}."], ["{dim_zh}的最高实践：让{concept_zh}成为本能。", "The highest practice of {dim_en}: make {concept_en} instinctive."], ["纸上得来终觉浅，{concept_zh}需在事上磨——{dim_zh}如此教诲。", "What's learned from paper is shallow; {concept_en} must be honed through action — so teaches {dim_en}."], ["{concept_zh}不是学问，而是修行，这是{dim_zh}的真义。", "{concept_en} is not scholarship but cultivation — this is the true meaning of {dim_en}."], ["{dim_zh}的精髓：以{concept_zh}修身，以{concept2_zh}济世。", "The essence of {dim_en}: cultivate oneself with {concept_en}, serve the world with {concept2_en}."], ["{action_zh}是对{concept_zh}最深刻的理解。", "{action_en} is the deepest understanding of {concept_en}."], ["{dim_zh}不是让你思考{concept_zh}，而是让你成为{concept_zh}。", "{dim_en} doesn't ask you to think about {concept_en}; it asks you to become {concept_en}."], ["{concept_zh}的光芒不在书本里，在行动中——{dim_zh}的启示。", "The brilliance of {concept_en} is not in books but in action — the revelation of {dim_en}."], ["{dim_zh}的修行路径：从{concept_zh}到{concept2_zh}，从知到行。", "The path of {dim_en}: from {concept_en} to {concept2_en}, from knowing to doing."], ["没有实践的{concept_zh}是死的，{dim_zh}让它活过来。", "{concept_en} without practice is dead; {dim_en} brings it to life."], ["{concept_zh}的最高境界是化境——{dim_zh}的终极追求。", "The highest realm of {concept_en} is the transcendent realm — the ultimate pursuit of {dim_en}."], ["{dim_zh}告诉我们：{concept_zh}不是学来的，是悟来的。", "{dim_en} tells us: {concept_en} is not learned but realized."], ["以{concept_zh}立身，以{concept2_zh}处事——{dim_zh}的人生哲学。", "Stand with {concept_en}, act with {concept2_en} — the life philosophy of {dim_en}."], ["{action_zh}的人，最懂{concept_zh}的分量。", "Those who {action_en} best understand the weight of {concept_en}."], ["{concept_zh}不是装饰品，而是必需品——{dim_zh}的忠告。", "{concept_en} is not decoration but necessity — the counsel of {dim_en}."], ["{dim_zh}的智慧：知{concept_zh}者智，行{concept_zh}者明。", "The wisdom of {dim_en}: those who know {concept_en} are wise; those who practice it are enlightened."]],
+  prefixes_zh: ["真正的", "深刻的", "纯粹的", "极致的", "本源的", "终极的", "永恒的", "鲜活的", "磅礴的", "精微的", "宏大的", "质朴的", "深邃的", "蓬勃的", "坚韧的", "通透的", "醇厚的", "灵动的", "厚重的", "澄澈的"],
+  prefixes_en: ["true ", "profound ", "pure ", "ultimate ", "essential ", "supreme ", "eternal ", "vivid ", "magnificent ", "subtle ", "grand ", "plain ", "deep ", "vigorous ", "resilient ", "lucid ", "rich ", "dynamic ", "weighty ", "luminous "],
+  suffixes_zh: ["的力量", "的智慧", "的精髓", "的本质", "的境界", "的光芒", "的实践", "的修行", "的传承", "的超越", "的觉醒", "的沉淀", "的升华", "的回归", "的绽放", "的凝聚", "的流淌", "的闪耀", "的回响", "的脉动"],
+  suffixes_en: ["'s power", "'s wisdom", "'s essence", "'s nature", "'s realm", "'s radiance", "'s practice", "'s cultivation", "'s heritage", "'s transcendence", "'s awakening", "'s depth", "'s elevation", "'s return", "'s blossoming", "'s cohesion", "'s flow", "'s shining", "'s resonance", "'s pulse"],
+};
+
+// Seeded random number generator (mulberry32)
+function mulberry32(seed) {
+  return function() {
+    let t = seed += 0x6D2B79F5;
+    t = Math.imul(t ^ t >>> 15, t | 1);
+    t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// Expand concept with modifiers (41x: original + 20 prefixed + 20 suffixed)
+function expandConcept(c_zh, c_en) {
+  const result = [[c_zh, c_en]];
+  for (let i = 0; i < ENGINE_DATA.prefixes_zh.length; i++) {
+    result.push([ENGINE_DATA.prefixes_zh[i] + c_zh, ENGINE_DATA.prefixes_en[i] + c_en]);
+  }
+  for (let i = 0; i < ENGINE_DATA.suffixes_zh.length; i++) {
+    result.push([c_zh + ENGINE_DATA.suffixes_zh[i], c_en + ENGINE_DATA.suffixes_en[i]]);
+  }
+  return result;
+}
+
+// Pre-expand all dimensions
+const DIMS_EXPANDED = {};
+const DIM_NAMES = Object.keys(ENGINE_DATA.dimensions);
+for (const dn of DIM_NAMES) {
+  const dd = ENGINE_DATA.dimensions[dn];
+  const expanded = [];
+  for (const c of dd.concepts) {
+    expanded.push(...expandConcept(c[0], c[1]));
+  }
+  DIMS_EXPANDED[dn] = {
+    concepts: expanded,
+    actions: dd.actions,
+    sources: dd.sources,
+    dim_zh: dd.dim_zh,
+    dim_en: dd.dim_en,
+  };
+}
+
+// Classify templates
+const TPL = { c_only: [], c_c2: [], c_act: [], all: [] };
+for (const t of ENGINE_DATA.templates) {
+  const hasC2 = t[0].includes('{concept2_zh}') || t[1].includes('{concept2_en}');
+  const hasAct = t[0].includes('{action_zh}') || t[1].includes('{action_en}');
+  if (hasC2 && hasAct) TPL.all.push(t);
+  else if (hasC2) TPL.c_c2.push(t);
+  else if (hasAct) TPL.c_act.push(t);
+  else TPL.c_only.push(t);
+}
+
+// Generate a single quote
+function genQuote(rng) {
+  const dimName = DIM_NAMES[Math.floor(rng() * DIM_NAMES.length)];
+  const dim = DIMS_EXPANDED[dimName];
+  const concepts = dim.concepts;
+  const actions = dim.actions;
+  const sources = dim.sources;
+
+  const r = rng();
+  let tpl, c1, c2, act;
+  
+  if (r < 0.15 && TPL.all.length > 0) {
+    tpl = TPL.all[Math.floor(rng() * TPL.all.length)];
+    c1 = concepts[Math.floor(rng() * concepts.length)];
+    c2 = concepts[Math.floor(rng() * concepts.length)];
+    act = actions[Math.floor(rng() * actions.length)];
+    if (c1[0] === c2[0]) return null;
+  } else if (r < 0.45 && TPL.c_c2.length > 0) {
+    tpl = TPL.c_c2[Math.floor(rng() * TPL.c_c2.length)];
+    c1 = concepts[Math.floor(rng() * concepts.length)];
+    c2 = concepts[Math.floor(rng() * concepts.length)];
+    act = ['', ''];
+    if (c1[0] === c2[0]) return null;
+  } else if (r < 0.75 && TPL.c_act.length > 0) {
+    tpl = TPL.c_act[Math.floor(rng() * TPL.c_act.length)];
+    c1 = concepts[Math.floor(rng() * concepts.length)];
+    c2 = ['', ''];
+    act = actions[Math.floor(rng() * actions.length)];
+  } else if (TPL.c_only.length > 0) {
+    tpl = TPL.c_only[Math.floor(rng() * TPL.c_only.length)];
+    c1 = concepts[Math.floor(rng() * concepts.length)];
+    c2 = ['', ''];
+    act = ['', ''];
+  } else {
+    return null;
+  }
+
+  let zh, en;
+  try {
+    zh = tpl[0]
+      .replace(/{concept_zh}/g, c1[0])
+      .replace(/{concept2_zh}/g, c2[0])
+      .replace(/{action_zh}/g, act[0])
+      .replace(/{dim_zh}/g, dim.dim_zh);
+    en = tpl[1]
+      .replace(/{concept_en}/g, c1[1])
+      .replace(/{concept2_en}/g, c2[1])
+      .replace(/{action_en}/g, act[1])
+      .replace(/{dim_en}/g, dim.dim_en);
+  } catch(e) {
+    return null;
+  }
+
+  if (zh.length < 6 || en.length < 10) return null;
+  if (zh.includes('{') || zh.includes('}') || en.includes('{') || en.includes('}')) return null;
+
+  const source = sources[Math.floor(rng() * sources.length)];
+  return { zh, en, cat: dimName, source };
+}
+
+// Simple hash for dedup
+function simpleHash(str) {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = ((h << 5) + h + str.charCodeAt(i)) | 0;
+  }
+  return h >>> 0;
+}
+
+// Generate a batch of unique quotes
+function genBatch(seed, count) {
+  const rng = mulberry32(seed);
+  const seen = new Set();
+  const quotes = [];
+  let attempts = 0;
+  const maxAttempts = count * 3;
+
+  while (quotes.length < count && attempts < maxAttempts) {
+    attempts++;
+    const q = genQuote(rng);
+    if (!q) continue;
+    const h = simpleHash(q.zh + '|' + q.en);
+    if (seen.has(h)) continue;
+    seen.add(h);
+    quotes.push(q);
+  }
+  return quotes;
+}
+
+// Get dimension list with counts
+function getDimInfo() {
+  return DIM_NAMES.map(dn => ({
+    name: dn,
+    zh: ENGINE_DATA.dimensions[dn].dim_zh,
+    en: ENGINE_DATA.dimensions[dn].dim_en,
+    conceptCount: DIMS_EXPANDED[dn].concepts.length,
+  }));
+}
+
+
+// ============================================================
+// APP LOGIC
+// ============================================================
+const PER_PAGE = 50;
+let currentPage = 0;
+let currentDim = 'all';
+let currentSearch = '';
+let allQuotes = [];
+let filteredQuotes = [];
+let totalGenerated = 0;
+const TOTAL_AVAILABLE = 136000000;
+const BATCH_GEN_SIZE = 5000;
+
+const isZh = document.documentElement.lang === 'zh-CN';
+
+function init() {
+  // Generate initial batch
+  generateBatch(0, BATCH_GEN_SIZE);
+  applyFilter();
+  renderPage();
+
+  // Event listeners
+  document.getElementById('search').addEventListener('input', debounce(function(e) {
+    currentSearch = e.target.value.toLowerCase();
+    currentPage = 0;
+    applyFilter();
+    renderPage();
+  }, 300));
+
+  document.querySelectorAll('.dim-chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.dim-chip').forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      currentDim = chip.dataset.dim;
+      currentPage = 0;
+      applyFilter();
+      renderPage();
+    });
+  });
+
+  document.querySelectorAll('.theme-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.theme-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.body.dataset.theme = btn.dataset.theme;
+      localStorage.setItem('theme', btn.dataset.theme);
+    });
+  });
+
+  // Restore theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.body.dataset.theme = savedTheme;
+    document.querySelectorAll('.theme-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.theme === savedTheme);
+    });
+  }
+
+  document.getElementById('next-page').addEventListener('click', function() {
+    currentPage++;
+    if ((currentPage + 1) * PER_PAGE >= filteredQuotes.length && totalGenerated < TOTAL_AVAILABLE) {
+      generateBatch(totalGenerated, BATCH_GEN_SIZE);
+      applyFilter();
+    }
+    renderPage();
+    window.scrollTo(0, 0);
+  });
+
+  document.getElementById('prev-page').addEventListener('click', function() {
+    if (currentPage > 0) {
+      currentPage--;
+      renderPage();
+      window.scrollTo(0, 0);
+    }
+  });
+
+  document.getElementById('random-btn').addEventListener('click', function() {
+    if (filteredQuotes.length === 0) return;
+    const q = filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)];
+    showRandomModal(q);
+  });
+
+  // Infinite scroll
+  window.addEventListener('scroll', debounce(function() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+      if ((currentPage + 1) * PER_PAGE < filteredQuotes.length) {
+        currentPage++;
+        renderPage(true);
+      } else if (totalGenerated < TOTAL_AVAILABLE) {
+        generateBatch(totalGenerated, BATCH_GEN_SIZE);
+        applyFilter();
+        currentPage++;
+        renderPage(true);
+      }
+    }
+  }, 200));
+}
+
+function generateBatch(startSeed, count) {
+  const batch = genBatch(42 + startSeed, count);
+  allQuotes = allQuotes.concat(batch);
+  totalGenerated += batch.length;
+  document.getElementById('stat-gen').textContent = formatNum(totalGenerated);
+}
+
+function applyFilter() {
+  filteredQuotes = allQuotes.filter(function(q) {
+    if (currentDim !== 'all' && q.cat !== currentDim) return false;
+    if (currentSearch) {
+      const s = currentSearch;
+      return q.zh.toLowerCase().includes(s) || q.en.toLowerCase().includes(s) ||
+             q.cat.toLowerCase().includes(s) || q.source.toLowerCase().includes(s);
+    }
+    return true;
+  });
+}
+
+function renderPage(append) {
+  const grid = document.getElementById('quotes-grid');
+  const loading = document.getElementById('loading');
+  const pagination = document.getElementById('pagination');
+
+  if (!append) grid.innerHTML = '';
+
+  const start = currentPage * PER_PAGE;
+  const end = Math.min(start + PER_PAGE, filteredQuotes.length);
+  const pageQuotes = filteredQuotes.slice(start, end);
+
+  if (pageQuotes.length === 0 && !append) {
+    loading.style.display = 'block';
+    return;
+  }
+  loading.style.display = 'none';
+  pagination.style.display = 'block';
+
+  pageQuotes.forEach(function(q) {
+    const card = document.createElement('div');
+    card.className = 'quote-card';
+    const catLabel = isZh ? q.cat : (ENGINE_DATA.dimensions[q.cat] ? ENGINE_DATA.dimensions[q.cat].dim_en : q.cat);
+    const copyText = 'Copy';
+    card.innerHTML =
+      '<button class="q-copy" onclick="copyQuote(this)">' + copyText + '</button>' +
+      '<div class="q-zh">' + escapeHtml(q.zh) + '</div>' +
+      '<div class="q-en">' + escapeHtml(q.en) + '</div>' +
+      '<div class="q-meta">' +
+        '<span class="q-cat">' + escapeHtml(catLabel) + '</span>' +
+        '<span class="q-source">' + escapeHtml(q.source) + '</span>' +
+      '</div>';
+    grid.appendChild(card);
+  });
+
+  // Update page info
+  const totalPages = Math.ceil(filteredQuotes.length / PER_PAGE);
+  document.getElementById('page-info').textContent =
+    (isZh ? '第 ' : 'Page ') + (currentPage + 1) + (isZh ? ' 页 / 共 ' : ' of ') + totalPages + (isZh ? ' 页' : '') +
+    ' | ' + filteredQuotes.length + (isZh ? ' 条' : ' entries');
+}
+
+function showRandomModal(q) {
+  const modal = document.getElementById('random-modal');
+  document.getElementById('modal-zh').textContent = q.zh;
+  document.getElementById('modal-en').textContent = q.en;
+  const catLabel = isZh ? q.cat : (ENGINE_DATA.dimensions[q.cat] ? ENGINE_DATA.dimensions[q.cat].dim_en : q.cat);
+  document.getElementById('modal-meta').textContent = catLabel + ' | ' + q.source;
+  modal.classList.add('show');
+}
+
+function copyQuote(btn) {
+  const card = btn.parentElement;
+  const zh = card.querySelector('.q-zh').textContent;
+  const en = card.querySelector('.q-en').textContent;
+  const text = zh + '\n' + en;
+  navigator.clipboard.writeText(text).then(function() {
+    btn.textContent = 'Copied';
+    setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
+  });
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function formatNum(n) {
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+function debounce(fn, delay) {
+  let timer;
+  return function() {
+    const args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function() { fn.apply(null, args); }, delay);
+  };
+}
+
+// Starfield animation
+function initStarfield() {
+  const canvas = document.getElementById('starfield');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars = [];
+    const count = Math.floor(canvas.width * canvas.height / 5000);
+    for (let i = 0; i < count; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.5,
+        opacity: Math.random(),
+        speed: Math.random() * 0.02 + 0.005,
+      });
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const theme = document.body.dataset.theme;
+    if (theme === 'space') {
+      for (const s of stars) {
+        s.opacity += s.speed;
+        if (s.opacity > 1 || s.opacity < 0) s.speed = -s.speed;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,' + Math.max(0, s.opacity) + ')';
+        ctx.fill();
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// Init
+initStarfield();
+init();
+</script>
+</body>
+</html>
